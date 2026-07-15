@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KwentoKids USB — 100 Kids Story Videos (Tagalog + English) | COD Nationwide</title>
+
+<!-- ============================================================
+  META PIXEL — replace YOUR_PIXEL_ID before launch
+============================================================ -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1E2A4A;        /* Night Ink — storybook navy */
+  --sun:#FFD34D;        /* Sunshine — highlight */
+  --coral:#FF5A4E;      /* Story Coral — CTA */
+  --coral-dark:#E33F33;
+  --cloud:#FFF9EE;      /* Cloud — page background */
+  --mint:#3EC9A7;       /* Mint — trust/success */
+  --white:#FFFFFF;
+  --shadow:0 6px 20px rgba(30,42,74,.12);
+  --radius:18px;
+  --font-display:'Baloo 2',cursive;
+  --font-body:'Nunito',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cloud);color:var(--ink);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--font-display);line-height:1.15}
+h2{font-size:1.6rem;margin-bottom:.6rem}
+.eyebrow{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+section{padding:36px 0}
+
+/* ---------- MARQUEE OFFER BAR ---------- */
+.marquee{background:var(--ink);color:var(--sun);font-weight:800;font-size:.85rem;overflow:hidden;white-space:nowrap;padding:8px 0;position:sticky;top:0;z-index:50}
+.marquee-track{display:inline-block;animation:scroll 18s linear infinite}
+.marquee-track span{margin-right:48px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- HERO ---------- */
+.hero{background:linear-gradient(180deg,#FFEFC2 0%,var(--cloud) 100%);padding:28px 0 40px;text-align:center;position:relative}
+.hero h1{font-size:2rem;margin:14px 0 8px}
+.hero h1 .hl{background:linear-gradient(transparent 55%,var(--sun) 55%)}
+.hero .sub{font-size:1.02rem;color:#3E4A6B;margin-bottom:18px}
+.badge-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.badge{background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:.75rem;font-weight:800}
+
+/* Storybook TV — swap this block for a real product video -->
+   <video autoplay muted loop playsinline poster="poster.jpg"><source src="demo.mp4"></video> */
+.tv{width:min(340px,88%);margin:0 auto 20px;background:var(--ink);border-radius:22px;padding:12px 12px 26px;box-shadow:var(--shadow);position:relative}
+.tv-screen{background:linear-gradient(135deg,#2C3E6B,#4a5f9e);border-radius:12px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.tv-screen .play{width:64px;height:64px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#fff;animation:pump 1.4s ease-in-out infinite}
+.tv-video{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+.tv-screen .star{position:absolute;font-size:1.1rem;animation:floaty 3s ease-in-out infinite}
+.tv-label{position:absolute;bottom:6px;left:0;right:0;text-align:center;color:var(--sun);font-family:var(--font-display);font-size:.8rem}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* ---------- CTA BUTTONS (pumping + ripple) ---------- */
+.cta{display:block;width:100%;max-width:380px;margin:0 auto;background:var(--coral);color:#fff;font-family:var(--font-display);font-size:1.2rem;font-weight:800;text-align:center;text-decoration:none;padding:16px 20px;border:none;border-radius:999px;box-shadow:0 6px 0 var(--coral-dark);cursor:pointer;position:relative;overflow:hidden;animation:pump 1.6s ease-in-out infinite}
+.cta small{display:block;font-family:var(--font-body);font-size:.75rem;font-weight:700;opacity:.9}
+@keyframes pump{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.5);transform:scale(0);animation:rip .6s linear;pointer-events:none}
+@keyframes rip{to{transform:scale(4);opacity:0}}
+
+/* ---------- URGENCY WIDGETS ---------- */
+.urgency{background:var(--white);border:2px dashed var(--coral);border-radius:var(--radius);padding:14px;margin:18px auto;max-width:420px;text-align:center}
+.countdown{font-family:var(--font-display);font-size:1.5rem;color:var(--coral)}
+.stockbar{background:#F0E6D2;border-radius:999px;height:14px;overflow:hidden;margin:8px 0 4px}
+.stockfill{background:linear-gradient(90deg,var(--coral),#FF8A50);height:100%;width:23%;border-radius:999px;transition:width 1s}
+.viewers{font-size:.8rem;color:#3E4A6B}
+.viewers b{color:var(--mint)}
+
+/* ---------- SECTIONS ---------- */
+.pain{background:var(--white)}
+.pain ul{list-style:none;margin-top:10px}
+.pain li{padding:10px 12px;margin-bottom:8px;background:#FFF3F2;border-left:4px solid var(--coral);border-radius:8px;font-weight:600}
+.solve li{background:#EAFBF5;border-left:4px solid var(--mint)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.cat{background:var(--white);border-radius:var(--radius);padding:14px;text-align:center;box-shadow:var(--shadow)}
+.cat .ico{font-size:1.8rem}
+.cat h3{font-size:.95rem;margin-top:6px}
+.cat p{font-size:.78rem;color:#3E4A6B}
+
+.feat{display:flex;gap:12px;align-items:flex-start;background:var(--white);border-radius:var(--radius);padding:14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.feat .ico{font-size:1.5rem;background:var(--sun);border-radius:12px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feat h3{font-size:1rem}
+.feat p{font-size:.85rem;color:#3E4A6B}
+
+.steps{counter-reset:step}
+.step{background:var(--white);border-radius:var(--radius);padding:16px 16px 16px 60px;margin-bottom:10px;position:relative;box-shadow:var(--shadow)}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:14px;width:34px;height:34px;background:var(--ink);color:var(--sun);font-family:var(--font-display);font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+/* ---------- BUNDLES / CHECKOUT ---------- */
+.checkout{background:linear-gradient(180deg,var(--cloud),#FFEFC2)}
+.hold{background:var(--ink);color:var(--sun);border-radius:12px;padding:10px;text-align:center;font-weight:800;font-size:.9rem;margin-bottom:14px}
+.hold b{font-family:var(--font-display);font-size:1.1rem}
+.bundle{background:var(--white);border:3px solid #E5DCC8;border-radius:var(--radius);padding:16px;margin-bottom:12px;cursor:pointer;position:relative;transition:.2s}
+.bundle.active{border-color:var(--coral);box-shadow:0 0 0 4px rgba(255,90,78,.15);transform:scale(1.02)}
+.bundle .tag{position:absolute;top:-12px;right:12px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:999px;animation:pump 1.6s infinite}
+.bundle .tag.best{background:var(--mint)}
+.bundle h3{font-size:1.05rem}
+.bundle .price{font-family:var(--font-display);font-size:1.5rem;color:var(--coral)}
+.bundle .old{text-decoration:line-through;color:#9aa3bd;font-size:.9rem;margin-left:6px}
+.bundle .free{color:var(--mint);font-weight:800;font-size:.83rem}
+.bundle .ship-warn{color:var(--coral);font-weight:700;font-size:.8rem}
+.freebie{background:#EAFBF5;border-radius:10px;padding:8px 10px;font-size:.8rem;font-weight:700;margin-top:8px;animation:floaty 2.5s ease-in-out infinite}
+
+.form{background:var(--white);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-top:16px}
+.form label{font-weight:800;font-size:.85rem;display:block;margin:12px 0 4px}
+.form input,.form select,.form textarea{width:100%;padding:12px;border:2px solid #E5DCC8;border-radius:10px;font-family:var(--font-body);font-size:1rem}
+.form input:focus,.form select:focus,.form textarea:focus{outline:3px solid var(--sun);border-color:var(--ink)}
+.form .invalid{border-color:var(--coral)!important;background:#FFF3F2;animation:shake .3s}
+.err-msg{display:none;color:var(--coral-dark);font-size:.78rem;font-weight:800;margin-top:4px}
+.err-msg.show{display:block}
+.err-banner{display:none;background:#FFF3F2;border:2px solid var(--coral);color:var(--coral-dark);border-radius:10px;padding:10px 12px;font-weight:800;font-size:.85rem;margin-top:14px;text-align:center}
+.err-banner.show{display:block;animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.codnote{display:flex;gap:10px;align-items:center;background:#EAFBF5;border-radius:10px;padding:10px;margin-top:14px;font-size:.83rem;font-weight:700}
+.total{display:flex;justify-content:space-between;font-family:var(--font-display);font-size:1.2rem;margin-top:14px;padding-top:12px;border-top:2px dashed #E5DCC8}
+
+/* ---------- PROOF ---------- */
+.proof-card{background:var(--white);border-radius:var(--radius);padding:14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.proof-card .who{font-weight:800;font-size:.85rem}
+.proof-card .who span{color:var(--mint);font-size:.75rem}
+.proof-card p{font-size:.88rem;margin-top:4px}
+.stars{color:var(--sun);letter-spacing:2px}
+/* Swap .proof-img divs with real screenshot <img> tags */
+.proof-img{background:#EFE7D4;border-radius:10px;height:90px;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#8b8368;margin-top:8px}
+.proof-row{display:flex;gap:8px;margin-top:8px}
+.proof-photo{width:110px;height:110px;object-fit:cover;border-radius:10px;display:block;border:2px solid #EFE7D4;cursor:zoom-in}
+
+/* ---------- FAQ ---------- */
+details{background:var(--white);border-radius:12px;padding:14px;margin-bottom:8px;box-shadow:var(--shadow)}
+summary{font-weight:800;cursor:pointer}
+details p{margin-top:8px;font-size:.88rem;color:#3E4A6B}
+
+/* ---------- FLOATING CTA + SUCCESS ---------- */
+.float-cta{position:fixed;bottom:12px;left:12px;right:12px;z-index:60;display:none}
+.float-cta.show{display:block}
+.success{position:fixed;inset:0;background:rgba(30,42,74,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.success.show{display:flex}
+.success-card{background:var(--white);border-radius:22px;padding:30px 22px;text-align:center;max-width:400px}
+.success-card .big{font-size:3rem}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:101}
+
+/* ---------- PURCHASE POPUP (side notification) ---------- */
+.buypop{position:fixed;left:12px;bottom:86px;z-index:70;background:var(--white);border-radius:14px;box-shadow:0 8px 24px rgba(30,42,74,.25);padding:10px 14px 10px 10px;display:flex;gap:10px;align-items:center;max-width:290px;transform:translateX(-120%);transition:transform .5s cubic-bezier(.2,.9,.3,1.2)}
+.buypop.show{transform:translateX(0)}
+.buypop .avatar{width:38px;height:38px;border-radius:50%;background:var(--sun);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.buypop .txt{font-size:.76rem;line-height:1.35}
+.buypop .txt b{font-size:.8rem}
+.buypop .time{color:var(--mint);font-weight:800;font-size:.7rem}
+
+footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;padding:28px 16px 90px}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- MARQUEE OFFER BAR -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>🚚 COD NATIONWIDE — BAYAD PAGDATING</span><span>🎁 FREE GIFT SA BAWAT BUNDLE</span><span>⭐ 100 STORY VIDEOS — TAGALOG + ENGLISH</span><span>🔥 SALE HANGGANG NGAYONG LINGGO LANG</span>
+    <span>🚚 COD NATIONWIDE — BAYAD PAGDATING</span><span>🎁 FREE GIFT SA BAWAT BUNDLE</span><span>⭐ 100 STORY VIDEOS — TAGALOG + ENGLISH</span><span>🔥 SALE HANGGANG NGAYONG LINGGO LANG</span>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Para sa mga batang 2–8 taong gulang</span>
+    <h1>100 Kids Story Videos sa <span class="hl">Isang USB</span> — Walang Internet, Walang Ads, Walang Alalahanin</h1>
+    <p class="sub">Isaksak lang sa TV. Instant na kwentong pambata — Tagalog at English — na may aral, hindi kung ano-anong lumalabas sa YouTube.</p>
+
+    <!-- SIGNATURE: storybook TV (replace with real demo video before launch) -->
+    <div class="tv">
+      <div class="tv-screen">
+        <video id="heroVid" class="tv-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" src="hero-demo.mp4"></video>
+        <button class="play" id="heroPlayBtn" style="display:none;position:absolute" onclick="heroPlay()" aria-label="Play video">▶</button>
+      </div>
+      <div class="tv-label">KwentoKids USB — plug & play sa kahit anong TV</div>
+    </div>
+
+    <div class="badge-row">
+      <span class="badge">✅ Plug & Play</span>
+      <span class="badge">🇵🇭 Tagalog + English</span>
+      <span class="badge">🚫 Ad-Free</span>
+    </div>
+
+    <button class="cta" onclick="goCheckout()">ORDER NA — COD 🚚<small>Bayad ka lang pagdating sa bahay niyo</small></button>
+
+    <!-- URGENCY WIDGET -->
+    <div class="urgency">
+      <div>⏰ Sale ends in <span class="countdown" id="cd">05:59:59</span></div>
+      <div class="stockbar"><div class="stockfill" id="stockfill"></div></div>
+      <div style="font-size:.8rem;font-weight:800;color:var(--coral)"><span id="stocknum">23</span> na lang natitira ngayong batch!</div>
+      <div class="viewers">👀 <b id="viewers">47</b> mommies ang tumitingin nito ngayon</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PAIN → SOLVE ================= -->
+<section class="pain">
+  <div class="wrap">
+    <span class="eyebrow">Pamilyar ba 'to, Mommy?</span>
+    <h2>Nanonood ang anak mo... pero alam mo ba talaga kung ANO?</h2>
+    <ul>
+      <li>😰 Isang nursery rhyme lang, tapos after 20 minutes kung ano-ano na ang nasa screen</li>
+      <li>📵 Nawalan ng WiFi o naubos ang load = iyakan agad</li>
+      <li>💸 Gabi-gabing gastos sa data para lang sa panonood</li>
+      <li>😔 Guilty ka tuwing TV time kasi hindi mo kontrolado ang content</li>
+    </ul>
+    <h2 style="margin-top:24px">Ang KwentoKids USB ang sagot:</h2>
+    <ul class="solve">
+      <li>✅ 100 videos na PINILI at ginawa para sa mga batang Pinoy</li>
+      <li>✅ Gumagana kahit ZERO internet, zero load, kahit brownout ng signal</li>
+      <li>✅ Walang ads, walang "up next", walang algorithm</li>
+      <li>✅ May values at aral ang bawat kwento — guilt-free screen time</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= WHAT'S INSIDE ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Ano'ng laman?</span>
+    <h2>100 Video Story Books — Narrated, Animated, May Aral</h2>
+    <div class="grid2">
+      <div class="cat"><div class="ico">🦁</div><h3>Animal Tales</h3><p>Kwento ng kabutihan at katapangan</p></div>
+      <div class="cat"><div class="ico">🌙</div><h3>Bedtime Stories</h3><p>Kalmadong boses, pang-patulog</p></div>
+      <div class="cat"><div class="ico">🔤</div><h3>English Learning</h3><p>Simple English na kayang sundan</p></div>
+      <div class="cat"><div class="ico">❤️</div><h3>Values & Aral</h3><p>Honesty, kindness, respeto</p></div>
+      <div class="cat"><div class="ico">🇵🇭</div><h3>Kwentong Tagalog</h3><p>Sariling wika, mas madaling ma-gets</p></div>
+      <div class="cat"><div class="ico">🎵</div><h3>Sing-Along</h3><p>Masayang kanta at rhymes</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEY FEATURES ================= -->
+<section style="background:var(--white)">
+  <div class="wrap">
+    <span class="eyebrow">Bakit sulit</span>
+    <h2>Ginawa para sa totoong buhay ng pamilyang Pinoy</h2>
+    <div class="feat"><div class="ico">🔌</div><div><h3>Kahit si Lola kaya</h3><p>Saksak sa USB port ng TV, pindot ng play. Walang app, walang password, walang setup.</p></div></div>
+    <div class="feat"><div class="ico">📴</div><div><h3>100% Offline</h3><p>Perfect sa probinsya, sa biyahe, o kapag mahina ang signal. One-time bili, panghabambuhay na panonood.</p></div></div>
+    <div class="feat"><div class="ico">🗣️</div><div><h3>Tagalog + English</h3><p>Dalawang wika para sa language development — natututo habang nanonood.</p></div></div>
+    <div class="feat"><div class="ico">🛡️</div><div><h3>100% Safe Content</h3><p>Bawat video ay para sa bata. Walang violence, walang ads, walang sorpresa.</p></div></div>
+    <div class="feat"><div class="ico">📺</div><div><h3>Compatible kahit saan</h3><p>Smart TV, regular TV na may USB port, laptop, computer — at pati cellphone at tablet gamit ang built-in OTG connector.</p></div></div>
+  </div>
+</section>
+
+<!-- ================= HOW TO USE ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Paano gamitin</span>
+    <h2>3 Steps lang — 30 seconds set-up</h2>
+    <div class="steps">
+      <div class="step"><h3>Isaksak</h3><p>I-plug ang KwentoKids USB sa USB port ng inyong TV.</p></div>
+      <div class="step"><h3>Piliin</h3><p>Buksan ang USB folder — nakaayos per category ang 100 videos.</p></div>
+      <div class="step"><h3>Panoorin</h3><p>Press play. Relax ka na, Mommy — safe ang panonood ni baby. 😌</p></div>
+    </div>
+    <button class="cta" onclick="goCheckout()" style="margin-top:16px">KUNIN ANG SA'YO — COD 🎁<small>May FREE gift sa bawat bundle</small></button>
+  </div>
+</section>
+
+<!-- ================= CHECKOUT / BUNDLES ================= -->
+<section class="checkout" id="checkout">
+  <div class="wrap">
+    <span class="eyebrow">Piliin ang bundle mo</span>
+    <h2>Mas Marami, Mas Tipid, Mas Maraming FREEBIES 🎁</h2>
+
+    <!-- PRICE-HOLD TIMER -->
+    <div class="hold">🔒 Naka-reserve ang presyo mo sa loob ng <b id="hold">10:00</b></div>
+
+    <div class="bundle" data-tier="1" data-price="359" data-ship="85" onclick="pick(this)">
+      <h3>1x KwentoKids USB</h3>
+      <div><span class="price">₱359</span><span class="old">₱599</span></div>
+      <div class="ship-warn">⚠️ + ₱85 shipping fee</div>
+    </div>
+
+    <div class="bundle active" data-tier="2" data-price="649" data-ship="0" onclick="pick(this)">
+      <span class="tag">PINAKA-SULIT ⭐</span>
+      <h3>2x KwentoKids USB</h3>
+      <div><span class="price">₱649</span><span class="old">₱1,198</span></div>
+      <div class="free">🚚 FREE SHIPPING</div>
+      <div class="freebie">🎁 FREE: Kids Sticker Pack — isa para sa bahay, isa kay Lola o pang-regalo!</div>
+    </div>
+
+    <div class="bundle" data-tier="3" data-price="899" data-ship="0" onclick="pick(this)">
+      <span class="tag best">PANG-REGALO 🎀</span>
+      <h3>3x KwentoKids USB</h3>
+      <div><span class="price">₱899</span><span class="old">₱1,797</span></div>
+      <div class="free">🚚 FREE SHIPPING</div>
+      <div class="freebie">🎁 FREE: 2x Sticker Pack + Mini Coloring Book — perfect sa pamangkin at inaanak!</div>
+    </div>
+
+    <!-- ORDER FORM -->
+    <div class="form">
+      <h3 style="font-size:1.1rem">📦 Saan namin ide-deliver?</h3>
+      <label for="name">Buong Pangalan</label>
+      <input id="name" type="text" placeholder="Hal. Maria Santos" autocomplete="name" required>
+      <div class="err-msg" id="err-name">⚠️ Pakilagay ang buong pangalan mo.</div>
+      <label for="phone">Mobile Number</label>
+      <input id="phone" type="tel" placeholder="09XX XXX XXXX" autocomplete="tel" inputmode="numeric" maxlength="13" required>
+      <div class="err-msg" id="err-phone">⚠️ Dapat 11 digits at nagsisimula sa 09 (hal. 09171234567).</div>
+      <label for="prov">Province</label>
+      <select id="prov" required onchange="onProv()">
+        <option value="">Piliin ang province</option>
+      </select>
+      <div class="err-msg" id="err-prov">⚠️ Piliin ang province mo.</div>
+      <label for="city">City / Municipality</label>
+      <select id="city" required disabled onchange="onCity()">
+        <option value="">Piliin muna ang province</option>
+      </select>
+      <div class="err-msg" id="err-city">⚠️ Piliin ang city o municipality mo.</div>
+      <label for="brgy">Barangay</label>
+      <select id="brgy" required disabled>
+        <option value="">Piliin muna ang city</option>
+      </select>
+      <input id="brgyText" type="text" placeholder="I-type ang barangay" style="display:none" autocomplete="address-level3">
+      <div class="err-msg" id="err-brgy">⚠️ Piliin (o i-type) ang barangay mo.</div>
+      <label for="street">House #, Street / Purok / Subdivision</label>
+      <input id="street" type="text" placeholder="Hal. 123 Sampaguita St., Phase 2" autocomplete="street-address" required>
+      <div class="err-msg" id="err-street">⚠️ Pakilagay ang house #, street o purok para mahanap ka ng courier.</div>
+
+      <div class="codnote">💵 <span>CASH ON DELIVERY — wala kang babayaran ngayon. Magbabayad ka lang kapag hawak mo na ang order mo.</span></div>
+
+      <div class="total"><span>Total (COD):</span><span id="total">₱649</span></div>
+      <div class="err-banner" id="errBanner">⚠️ May kulang o mali sa form — paki-check ang mga naka-red sa taas. 🙏</div>
+
+      <button class="cta" style="margin-top:16px" onclick="submitOrder(event)">✅ CONFIRM ORDER — COD<small>Ide-deliver sa 2–7 days</small></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Totoong feedback</span>
+    <h2>Mahigit 1,000+ nanay na ang nag-order 💛</h2>
+    <!-- Replace .proof-img with real customer screenshots / photos -->
+    <div class="proof-card">
+      <div class="who">Jenny R. — Batangas <span>✔ Verified COD Buyer</span></div>
+      <div class="stars">★★★★★</div>
+      <p>"Hindi na ako kinakabahan tuwing nanonood si Zia. Yung English stories pa, napapa-repeat niya yung words. Sulit!"</p>
+      <div class="proof-row">
+        <img class="proof-photo" src="proof-photo-2.jpg" alt="Natanggap na parcel mula sa courier" loading="lazy">
+        <img class="proof-photo" src="proof-photo-1.jpg" alt="Nanay na inaabot ang KwentoKids USB sa anak habang nakabukas ang KwentoKids menu sa TV" loading="lazy">
+      </div>
+    </div>
+    <div class="proof-card">
+      <div class="who">Mark & Ana D. — Cebu <span>✔ Verified COD Buyer</span></div>
+      <div class="stars">★★★★★</div>
+      <p>"Binigay namin yung isa kay Mama sa province. Kahit walang WiFi doon, may panonood na yung mga apo. Salamat!"</p>
+      <div class="proof-row">
+        <img class="proof-photo" src="proof-photo-3.jpg" alt="Batang nanonood ng kwento sa TV" loading="lazy">
+        <img class="proof-photo" src="proof-photo-4.jpg" alt="Story video na tumutugtog sa computer" loading="lazy">
+      </div>
+    </div>
+    <div class="proof-card">
+      <div class="who">Rowena T. — Quezon City <span>✔ Verified COD Buyer</span></div>
+      <div class="stars">★★★★★</div>
+      <p>"Bedtime hero talaga 'to. Pagkatapos ng 1 story, tulog na si bunso. Mommy win!"</p>
+      <div class="proof-row">
+        <img class="proof-photo" src="proof-photo-5.jpg" alt="Kwento na tumutugtog sa wall-mounted TV" loading="lazy">
+        <img class="proof-photo" src="proof-photo-6.jpg" alt="Video menu ng USB sa TV screen" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section style="background:var(--white)">
+  <div class="wrap">
+    <span class="eyebrow">Mga tanong</span>
+    <h2>FAQ</h2>
+    <details><summary>Gagana ba 'to sa TV namin?</summary><p>Oo — basta may USB port ang TV niyo (halos lahat ng TV mula 2010 pataas ay meron). Gagana rin sa laptop at computer.</p></details>
+    <details><summary>Kailangan ba ng internet?</summary><p>Hindi! 100% offline. Nasa USB na lahat ng 100 videos.</p></details>
+    <details><summary>Pwede ba sa cellphone?</summary><p>Oo! Ang KwentoKids USB ay may OTG (On-The-Go) connector — direktang isaksak sa cellphone o tablet at panoorin kahit saan. Perfect pang-biyahe, sa waiting area, o kahit nasa labas kayo. 📱</p></details>
+    <details><summary>Paano ang bayad?</summary><p>Cash on Delivery. Magbabayad ka lang sa courier kapag dumating na ang order — zero risk sa'yo.</p></details>
+    <details><summary>Gaano katagal ang delivery?</summary><p>2–4 days sa Metro Manila at katabing provinces, 4–7 days sa ibang region.</p></details>
+    <details><summary>Ano ang laman ng 100 videos?</summary><p>Animal tales, bedtime stories, English learning stories, values stories, kwentong Tagalog, at sing-alongs — lahat para sa edad 2–8.</p></details>
+    <details><summary>Paano kung sira o hindi gumana?</summary><p>Papalitan namin agad — i-message lang kami sa aming FB page with photo/video. Replacement guarantee.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div style="font-family:var(--font-display);font-size:1.1rem;color:var(--sun)">KwentoKids</div>
+  <p>© 2026 KwentoKids PH. Lahat ng videos ay original content. COD Nationwide via trusted couriers.</p>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="float-cta" id="floatCta">
+  <button class="cta" onclick="goCheckout()">ORDER NA — COD 🚚 <span id="floatPrice">₱649</span></button>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="success" id="successModal" role="dialog" aria-modal="true">
+  <div class="success-card">
+    <div class="big">🎉</div>
+    <h2>Salamat, Mommy!</h2>
+    <p style="margin:10px 0">Na-receive na namin ang order mo. Tatawagan/tetext ka namin para i-confirm bago i-ship. Ihanda lang ang <b id="successTotal">₱649</b> pagdating ng courier. 💛</p>
+    <button class="cta" onclick="document.getElementById('successModal').classList.remove('show')">OK, hihintayin ko! 📦</button>
+  </div>
+</div>
+<!-- PURCHASE POPUP -->
+<div class="buypop" id="buypop" aria-live="polite">
+  <div class="avatar" id="bpAvatar">👩</div>
+  <div class="txt"><b id="bpName">Maria — Cebu City</b><br><span id="bpItem">bumili ng 2x KwentoKids Bundle</span><br><span class="time" id="bpTime">2 minutes ago ✔</span></div>
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script>
+/* ============================================================
+   CONFIG — replace before launch
+============================================================ */
+const WEBHOOK_URL = 'YOUR_WEBHOOK_URL';   // e.g. Google Sheets / Make.com / n8n endpoint
+const PIXEL_READY = typeof fbq === 'function';
+
+/* ---------- Countdown (resets daily) ---------- */
+const cdEl = document.getElementById('cd');
+let end = Date.now() + (5*3600 + 59*60 + 59) * 1000;
+setInterval(()=>{
+  let d = Math.max(0, end - Date.now());
+  if(d === 0) end = Date.now() + 6*3600*1000;
+  const h = String(Math.floor(d/3600000)).padStart(2,'0');
+  const m = String(Math.floor(d%3600000/60000)).padStart(2,'0');
+  const s = String(Math.floor(d%60000/1000)).padStart(2,'0');
+  cdEl.textContent = `${h}:${m}:${s}`;
+},1000);
+
+/* ---------- Price-hold timer ---------- */
+const holdEl = document.getElementById('hold');
+let holdLeft = 600;
+setInterval(()=>{
+  holdLeft = holdLeft > 0 ? holdLeft - 1 : 600;
+  holdEl.textContent = `${String(Math.floor(holdLeft/60)).padStart(2,'0')}:${String(holdLeft%60).padStart(2,'0')}`;
+},1000);
+
+/* ---------- Live viewers + stock drift ---------- */
+const vEl = document.getElementById('viewers');
+let v = 47;
+setInterval(()=>{ v = Math.max(28, Math.min(80, v + (Math.random()>.5?1:-1)*Math.ceil(Math.random()*3))); vEl.textContent = v; },4000);
+let stock = 23;
+setInterval(()=>{ if(stock>9 && Math.random()>.7){ stock--; document.getElementById('stocknum').textContent = stock; document.getElementById('stockfill').style.width = stock+'%'; } },25000);
+
+/* ---------- Bundle selection ---------- */
+let sel = {tier:2, price:649, ship:0};
+function pick(el){
+  document.querySelectorAll('.bundle').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  sel = {tier:+el.dataset.tier, price:+el.dataset.price, ship:+el.dataset.ship};
+  const total = sel.price + sel.ship;
+  document.getElementById('total').textContent = '₱' + total.toLocaleString();
+  document.getElementById('floatPrice').textContent = '₱' + total.toLocaleString();
+  if(PIXEL_READY) fbq('track','InitiateCheckout',{value:total,currency:'PHP',content_name:'KwentoKids USB '+sel.tier+'x'});
+}
+
+/* ---------- Scroll to checkout + floating CTA ---------- */
+function goCheckout(){ document.getElementById('checkout').scrollIntoView({behavior:'smooth'}); }
+window.addEventListener('scroll',()=>{
+  const co = document.getElementById('checkout').getBoundingClientRect();
+  const inCheckout = co.top < window.innerHeight && co.bottom > 0;
+  document.getElementById('floatCta').classList.toggle('show', window.scrollY > 500 && !inCheckout);
+});
+
+/* ---------- Ripple on all CTAs ---------- */
+document.querySelectorAll('.cta').forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    const r = document.createElement('span');
+    r.className = 'ripple';
+    const rect = btn.getBoundingClientRect(), size = Math.max(rect.width, rect.height);
+    r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+    btn.appendChild(r); setTimeout(()=>r.remove(),600);
+  });
+});
+
+/* ---------- Order submit: Pixel Purchase + webhook w/ shared event_id (CAPI dedup) ---------- */
+async function submitOrder(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phoneRaw = document.getElementById('phone').value;
+  const phone = phoneRaw.replace(/[\s-]/g,'');
+  const prov = document.getElementById('prov').value;
+  const city = document.getElementById('city').value;
+  const brgySel = document.getElementById('brgy');
+  const usingText = brgySel.style.display==='none';
+  const brgy = usingText ? document.getElementById('brgyText').value.trim() : brgySel.value;
+  const street = document.getElementById('street').value.trim();
+
+  clearErrors();
+  let bad = [];
+  if(!name) bad.push(mark('name','err-name'));
+  if(!phone) bad.push(mark('phone','err-phone'));
+  else if(!/^09\d{9}$/.test(phone)) bad.push(mark('phone','err-phone'));
+  if(!prov) bad.push(mark('prov','err-prov'));
+  if(!city) bad.push(mark('city','err-city'));
+  if(!brgy) bad.push(mark(usingText?'brgyText':'brgy','err-brgy'));
+  if(!street) bad.push(mark('street','err-street'));
+  if(bad.length){
+    document.getElementById('errBanner').classList.add('show');
+    bad[0].scrollIntoView({behavior:'smooth',block:'center'});
+    bad[0].focus({preventScroll:true});
+    return;
+  }
+
+  const total = sel.price + sel.ship;
+  const eventId = (crypto.randomUUID ? crypto.randomUUID() : 'evt_' + Date.now());
+
+  // 1) Browser pixel — Purchase with event_id
+  if(PIXEL_READY) fbq('track','Purchase',{value:total,currency:'PHP',content_name:'KwentoKids USB '+sel.tier+'x',num_items:sel.tier},{eventID:eventId});
+
+  // 2) Webhook → your backend forwards to Meta CAPI with the SAME event_id for dedup
+  try{
+    await fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({event_id:eventId,name,phone,province:prov,city,barangay:brgy,street,bundle:sel.tier+'x',amount:total,currency:'PHP',source:'kwentokids-funnel',ts:new Date().toISOString()})});
+  }catch(err){ console.warn('Webhook failed — order data:',err); }
+
+  // 3) Success + confetti
+  document.getElementById('successTotal').textContent = '₱' + total.toLocaleString();
+  document.getElementById('successModal').classList.add('show');
+  confetti();
+}
+
+
+/* ============================================================
+   PH LOCATIONS — Province → City → Barangay (PSGC data)
+   Barangays lazy-load from ph-barangays.json (host it next to
+   this file). If it fails to load, a free-text field appears.
+============================================================ */
+const PH_LOC={"Abra":[["Bangued (Capital)","140101"],["Boliney","140102"],["Bucay","140103"],["Bucloc","140104"],["Daguioman","140105"],["Danglas","140106"],["Dolores","140107"],["La Paz","140108"],["Lacub","140109"],["Lagangilang","140110"],["Lagayan","140111"],["Langiden","140112"],["Licuan-Baay (Licuan)","140113"],["Luba","140114"],["Malibcong","140115"],["Manabo","140116"],["Peñarrubia","140117"],["Pidigan","140118"],["Pilar","140119"],["Sallapadan","140120"],["San Isidro","140121"],["San Juan","140122"],["San Quintin","140123"],["Tayum","140124"],["Tineg","140125"],["Tubo","140126"],["Villaviciosa","140127"]],"Agusan del Norte":[["Buenavista","160201"],["Butuan City (Capital)","160202"],["Cabadbaran City","160203"],["Carmen","160204"],["Jabonga","160205"],["Kitcharao","160206"],["Las Nieves","160207"],["Magallanes","160208"],["Nasipit","160209"],["Remedios T. Romualdez","160212"],["Santiago","160210"],["Tubay","160211"]],"Agusan del Sur":[["Bayugan City","160301"],["Bunawan","160302"],["Esperanza","160303"],["La Paz","160304"],["Loreto","160305"],["Prosperidad (Capital)","160306"],["Rosario","160307"],["San Francisco","160308"],["San Luis","160309"],["Santa Josefa","160310"],["Sibagat","160314"],["Talacogon","160311"],["Trento","160312"],["Veruela","160313"]],"Aklan":[["Altavas","060401"],["Balete","060402"],["Banga","060403"],["Batan","060404"],["Buruanga","060405"],["Ibajay","060406"],["Kalibo (Capital)","060407"],["Lezo","060408"],["Libacao","060409"],["Madalag","060410"],["Makato","060411"],["Malay","060412"],["Malinao","060413"],["Nabas","060414"],["New Washington","060415"],["Numancia","060416"],["Tangalan","060417"]],"Albay":[["Bacacay","050501"],["Camalig","050502"],["Daraga (Locsin)","050503"],["Guinobatan","050504"],["Jovellar","050505"],["Legazpi City (Capital)","050506"],["Libon","050507"],["Ligao City","050508"],["Malilipot","050509"],["Malinao","050510"],["Manito","050511"],["Oas","050512"],["Pio Duran","050513"],["Polangui","050514"],["Rapu-Rapu","050515"],["Santo Domingo (Libog)","050516"],["Tabaco City","050517"],["Tiwi","050518"]],"Antique":[["Anini-Y","060601"],["Barbaza","060602"],["Belison","060603"],["Bugasong","060604"],["Caluya","060605"],["Culasi","060606"],["Hamtic","060608"],["Laua-An","060609"],["Libertad","060610"],["Pandan","060611"],["Patnongon","060612"],["San Jose (Capital)","060613"],["San Remigio","060614"],["Sebaste","060615"],["Sibalom","060616"],["Tibiao","060617"],["Tobias Fornier (Dao)","060607"],["Valderrama","060618"]],"Apayao":[["Calanasan (Bayag)","148101"],["Conner","148102"],["Flora","148103"],["Kabugao (Capital)","148104"],["Luna","148105"],["Pudtol","148106"],["Santa Marcela","148107"]],"Aurora":[["Baler (Capital)","037701"],["Casiguran","037702"],["Dilasag","037703"],["Dinalungan","037704"],["Dingalan","037705"],["Dipaculao","037706"],["Maria Aurora","037707"],["San Luis","037708"]],"Basilan":[["Akbar","150708"],["Al-Barka","150709"],["Hadji Mohammad Ajul","150710"],["Hadji Muhtamad","150712"],["Lamitan City","150702"],["Lantawan","150703"],["Maluso","150704"],["Sumisip","150705"],["Tabuan-Lasa","150713"],["Tipo-Tipo","150706"],["Tuburan","150707"],["Ungkaya Pukan","150711"]],"Bataan":[["Abucay","030801"],["Bagac","030802"],["Balanga (Capital) City","030803"],["Dinalupihan","030804"],["Hermosa","030805"],["Limay","030806"],["Mariveles","030807"],["Morong","030808"],["Orani","030809"],["Orion","030810"],["Pilar","030811"],["Samal","030812"]],"Batanes":[["Basco (Capital)","020901"],["Itbayat","020902"],["Ivana","020903"],["Mahatao","020904"],["Sabtang","020905"],["Uyugan","020906"]],"Batangas":[["Agoncillo","041001"],["Alitagtag","041002"],["Balayan","041003"],["Balete","041004"],["Batangas City (Capital)","041005"],["Bauan","041006"],["Calaca","041007"],["Calatagan","041008"],["Cuenca","041009"],["Ibaan","041010"],["Laurel","041011"],["Lemery","041012"],["Lian","041013"],["Lipa City","041014"],["Lobo","041015"],["Mabini","041016"],["Malvar","041017"],["Mataasnakahoy","041018"],["Nasugbu","041019"],["Padre Garcia","041020"],["Rosario","041021"],["San Jose","041022"],["San Juan","041023"],["San Luis","041024"],["San Nicolas","041025"],["San Pascual","041026"],["Santa Teresita","041027"],["Santo Tomas","041028"],["Taal","041029"],["Talisay","041030"],["Tanauan City","041031"],["Taysan","041032"],["Tingloy","041033"],["Tuy","041034"]],"Benguet":[["Atok","141101"],["Baguio City","141102"],["Bakun","141103"],["Bokod","141104"],["Buguias","141105"],["Itogon","141106"],["Kabayan","141107"],["Kapangan","141108"],["Kibungan","141109"],["La Trinidad (Capital)","141110"],["Mankayan","141111"],["Sablan","141112"],["Tuba","141113"],["Tublay","141114"]],"Biliran":[["Almeria","087801"],["Biliran","087802"],["Cabucgayan","087803"],["Caibiran","087804"],["Culaba","087805"],["Kawayan","087806"],["Maripipi","087807"],["Naval (Capital)","087808"]],"Bohol":[["Alburquerque","071201"],["Alicia","071202"],["Anda","071203"],["Antequera","071204"],["Baclayon","071205"],["Balilihan","071206"],["Batuan","071207"],["Bien Unido","071248"],["Bilar","071208"],["Buenavista","071209"],["Calape","071210"],["Candijay","071211"],["Carmen","071212"],["Catigbian","071213"],["Clarin","071214"],["Corella","071215"],["Cortes","071216"],["Dagohoy","071217"],["Danao","071218"],["Dauis","071219"],["Dimiao","071220"],["Duero","071221"],["Garcia Hernandez","071222"],["Guindulman","071223"],["Inabanga","071224"],["Jagna","071225"],["Jetafe","071226"],["Lila","071227"],["Loay","071228"],["Loboc","071229"],["Loon","071230"],["Mabini","071231"],["Maribojoc","071232"],["Panglao","071233"],["Pilar","071234"],["Pres. Carlos P. Garcia (Pitogo)","071235"],["Sagbayan (Borja)","071236"],["San Isidro","071237"],["San Miguel","071238"],["Sevilla","071239"],["Sierra Bullones","071240"],["Sikatuna","071241"],["Tagbilaran City (Capital)","071242"],["Talibon","071243"],["Trinidad","071244"],["Tubigon","071245"],["Ubay","071246"],["Valencia","071247"]],"Bukidnon":[["Baungon","101301"],["Cabanglasan","101322"],["Damulog","101302"],["Dangcagan","101303"],["Don Carlos","101304"],["Impasug-Ong","101305"],["Kadingilan","101306"],["Kalilangan","101307"],["Kibawe","101308"],["Kitaotao","101309"],["Lantapan","101310"],["Libona","101311"],["Malaybalay (Capital) City","101312"],["Malitbog","101313"],["Manolo Fortich","101314"],["Maramag","101315"],["Pangantucan","101316"],["Quezon","101317"],["San Fernando","101318"],["Sumilao","101319"],["Talakag","101320"],["Valencia City","101321"]],"Bulacan":[["Angat","031401"],["Balagtas (Bigaa)","031402"],["Baliuag","031403"],["Bocaue","031404"],["Bulacan","031405"],["Bustos","031406"],["Calumpit","031407"],["Doña Remedios Trinidad","031424"],["Guiguinto","031408"],["Hagonoy","031409"],["Malolos (Capital) City","031410"],["Marilao","031411"],["Meycauayan City","031412"],["Norzagaray","031413"],["Obando","031414"],["Pandi","031415"],["Paombong","031416"],["Plaridel","031417"],["Pulilan","031418"],["San Ildefonso","031419"],["San Jose del Monte City","031420"],["San Miguel","031421"],["San Rafael","031422"],["Santa Maria","031423"]],"Cagayan":[["Abulug","021501"],["Alcala","021502"],["Allacapan","021503"],["Amulung","021504"],["Aparri","021505"],["Baggao","021506"],["Ballesteros","021507"],["Buguey","021508"],["Calayan","021509"],["Camalaniugan","021510"],["Claveria","021511"],["Enrile","021512"],["Gattaran","021513"],["Gonzaga","021514"],["Iguig","021515"],["Lal-Lo","021516"],["Lasam","021517"],["Pamplona","021518"],["Peñablanca","021519"],["Piat","021520"],["Rizal","021521"],["Sanchez-Mira","021522"],["Santa Ana","021523"],["Santa Praxedes","021524"],["Santa Teresita","021525"],["Santo Niño (Faire)","021526"],["Solana","021527"],["Tuao","021528"],["Tuguegarao City (Capital)","021529"]],"Camarines Norte":[["Basud","051601"],["Capalonga","051602"],["Daet (Capital)","051603"],["Jose Panganiban","051605"],["Labo","051606"],["Mercedes","051607"],["Paracale","051608"],["San Lorenzo Ruiz (Imelda)","051604"],["San Vicente","051609"],["Santa Elena","051610"],["Talisay","051611"],["Vinzons","051612"]],"Camarines Sur":[["Baao","051701"],["Balatan","051702"],["Bato","051703"],["Bombon","051704"],["Buhi","051705"],["Bula","051706"],["Cabusao","051707"],["Calabanga","051708"],["Camaligan","051709"],["Canaman","051710"],["Caramoan","051711"],["Gainza","051713"],["Garchitorena","051714"],["Goa","051715"],["Iriga City","051716"],["Lagonoy","051717"],["Libmanan","051718"],["Lupi","051719"],["Magarao","051720"],["Milaor","051721"],["Minalabac","051722"],["Nabua","051723"],["Naga City","051724"],["Ocampo","051725"],["Pamplona","051726"],["Pasacao","051727"],["Pili (Capital)","051728"],["Presentacion (Parubcan)","051729"],["Ragay","051730"],["Sagñay","051731"],["San Fernando","051732"],["San Jose","051733"],["Sipocot","051734"],["Siruma","051735"],["Tigaon","051736"],["Tinambac","051737"],["del Gallego","051712"]],"Camiguin":[["Catarman","101801"],["Guinsiliban","101802"],["Mahinog","101803"],["Mambajao (Capital)","101804"],["Sagay","101805"]],"Capiz":[["Cuartero","061901"],["Dao","061902"],["Dumalag","061903"],["Dumarao","061904"],["Ivisan","061905"],["Jamindan","061906"],["Ma-Ayon","061907"],["Mambusao","061908"],["Panay","061909"],["Panitan","061910"],["Pilar","061911"],["Pontevedra","061912"],["President Roxas","061913"],["Roxas City (Capital)","061914"],["Sapi-An","061915"],["Sigma","061916"],["Tapaz","061917"]],"Catanduanes":[["Bagamanoc","052001"],["Baras","052002"],["Bato","052003"],["Caramoran","052004"],["Gigmoto","052005"],["Pandan","052006"],["Panganiban (Payo)","052007"],["San Andres (Calolbon)","052008"],["San Miguel","052009"],["Viga","052010"],["Virac (Capital)","052011"]],"Cavite":[["Alfonso","042101"],["Amadeo","042102"],["Bacoor City","042103"],["Carmona","042104"],["Cavite City","042105"],["Dasmariñas City","042106"],["Gen. Mariano Alvarez","042123"],["General Emilio Aguinaldo","042107"],["General Trias","042108"],["Imus City","042109"],["Indang","042110"],["Kawit","042111"],["Magallanes","042112"],["Maragondon","042113"],["Mendez (Mendez-Nuñez)","042114"],["Naic","042115"],["Noveleta","042116"],["Rosario","042117"],["Silang","042118"],["Tagaytay City","042119"],["Tanza","042120"],["Ternate","042121"],["Trece Martires City (Capital)","042122"]],"Cebu":[["Alcantara","072201"],["Alcoy","072202"],["Alegria","072203"],["Aloguinsan","072204"],["Argao","072205"],["Asturias","072206"],["Badian","072207"],["Balamban","072208"],["Bantayan","072209"],["Barili","072210"],["Bogo City","072211"],["Boljoon","072212"],["Borbon","072213"],["Carcar City","072214"],["Carmen","072215"],["Catmon","072216"],["Cebu City (Capital)","072217"],["Compostela","072218"],["Consolacion","072219"],["Cordova","072220"],["Daanbantayan","072221"],["Dalaguete","072222"],["Danao City","072223"],["Dumanjug","072224"],["Ginatilan","072225"],["Lapu-Lapu City (Opon)","072226"],["Liloan","072227"],["Madridejos","072228"],["Malabuyoc","072229"],["Mandaue City","072230"],["Medellin","072231"],["Minglanilla","072232"],["Moalboal","072233"],["Naga City","072234"],["Oslob","072235"],["Pilar","072236"],["Pinamungahan","072237"],["Poro","072238"],["Ronda","072239"],["Samboan","072240"],["San Fernando","072241"],["San Francisco","072242"],["San Remigio","072243"],["Santa Fe","072244"],["Santander","072245"],["Sibonga","072246"],["Sogod","072247"],["Tabogon","072248"],["Tabuelan","072249"],["Talisay City","072250"],["Toledo City","072251"],["Tuburan","072252"],["Tudela","072253"]],"City of Isabela":[["Isabela City","099701"]],"Compostela Valley":[["Compostela","118201"],["Laak (San Vicente)","118202"],["Mabini (Doña Alicia)","118203"],["Maco","118204"],["Maragusan (San Mariano)","118205"],["Mawab","118206"],["Monkayo","118207"],["Montevista","118208"],["Nabunturan (Capital)","118209"],["New Bataan","118210"],["Pantukan","118211"]],"Cotabato (North Cotabato)":[["Alamada","124701"],["Aleosan","124717"],["Antipas","124715"],["Arakan","124718"],["Banisilan","124716"],["Carmen","124702"],["Kabacan","124703"],["Kidapawan (Capital) City","124704"],["Libungan","124705"],["M'Lang","124710"],["Magpet","124706"],["Makilala","124707"],["Matalam","124708"],["Midsayap","124709"],["Pigkawayan","124711"],["Pikit","124712"],["President Roxas","124713"],["Tulunan","124714"]],"Cotabato City":[["Cotabato City","129804"]],"Davao Occidental":[["Don Marcelino","118601"],["Jose Abad Santos (Trinidad)","118602"],["Malita","118603"],["Santa Maria","118604"],["Sarangani","118605"]],"Davao Oriental":[["Baganga","112501"],["Banaybanay","112502"],["Boston","112503"],["Caraga","112504"],["Cateel","112505"],["Governor Generoso","112506"],["Lupon","112507"],["Manay","112508"],["Mati (Capital) City","112509"],["San Isidro","112510"],["Tarragona","112511"]],"Davao del Norte":[["Asuncion (Saug)","112301"],["Braulio E. Dujali","112323"],["Carmen","112303"],["Island Garden City of Samal","112317"],["Kapalong","112305"],["New Corella","112314"],["Panabo City","112315"],["San Isidro","112324"],["Santo Tomas","112318"],["Tagum (Capital) City","112319"],["Talaingod","112322"]],"Davao del Sur":[["Bansalan","112401"],["Davao City","112402"],["Digos (Capital) City","112403"],["Hagonoy","112404"],["Kiblawan","112406"],["Magsaysay","112407"],["Malalag","112408"],["Matanao","112410"],["Padada","112411"],["Santa Cruz","112412"],["Sulop","112414"]],"Dinagat Islands":[["Basilisa (Rizal)","168501"],["Cagdianao","168502"],["Dinagat","168503"],["Libjo (Albor)","168504"],["Loreto","168505"],["San Jose (Capital)","168506"],["Tubajon","168507"]],"Eastern Samar":[["Arteche","082601"],["Balangiga","082602"],["Balangkayan","082603"],["Borongan (Capital) City","082604"],["Can-Avid","082605"],["Dolores","082606"],["General Macarthur","082607"],["Giporlos","082608"],["Guiuan","082609"],["Hernani","082610"],["Jipapad","082611"],["Lawaan","082612"],["Llorente","082613"],["Maslog","082614"],["Maydolong","082615"],["Mercedes","082616"],["Oras","082617"],["Quinapondan","082618"],["Salcedo","082619"],["San Julian","082620"],["San Policarpo","082621"],["Sulat","082622"],["Taft","082623"]],"Guimaras":[["Buenavista","067901"],["Jordan (Capital)","067902"],["Nueva Valencia","067903"],["San Lorenzo","067904"],["Sibunag","067905"]],"Ifugao":[["Aguinaldo","142708"],["Alfonso Lista (Potia)","142707"],["Asipulo","142711"],["Banaue","142701"],["Hingyon","142709"],["Hungduan","142702"],["Kiangan","142703"],["Lagawe (Capital)","142704"],["Lamut","142705"],["Mayoyao","142706"],["Tinoc","142710"]],"Ilocos Norte":[["Adams","012801"],["Bacarra","012802"],["Badoc","012803"],["Bangui","012804"],["Banna (Espiritu)","012811"],["Batac City","012805"],["Burgos","012806"],["Carasi","012807"],["Currimao","012808"],["Dingras","012809"],["Dumalneg","012810"],["Laoag City (Capital)","012812"],["Marcos","012813"],["Nueva Era","012814"],["Pagudpud","012815"],["Paoay","012816"],["Pasuquin","012817"],["Piddig","012818"],["Pinili","012819"],["San Nicolas","012820"],["Sarrat","012821"],["Solsona","012822"],["Vintar","012823"]],"Ilocos Sur":[["Alilem","012901"],["Banayoyo","012902"],["Bantay","012903"],["Burgos","012904"],["Cabugao","012905"],["Candon City","012906"],["Caoayan","012907"],["Cervantes","012908"],["Galimuyod","012909"],["Gregorio del Pilar (Concepcion)","012910"],["Lidlidda","012911"],["Magsingal","012912"],["Nagbukel","012913"],["Narvacan","012914"],["Quirino (Angkaki)","012915"],["Salcedo (Baugen)","012916"],["San Emilio","012917"],["San Esteban","012918"],["San Ildefonso","012919"],["San Juan (Lapog)","012920"],["San Vicente","012921"],["Santa","012922"],["Santa Catalina","012923"],["Santa Cruz","012924"],["Santa Lucia","012925"],["Santa Maria","012926"],["Santiago","012927"],["Santo Domingo","012928"],["Sigay","012929"],["Sinait","012930"],["Sugpon","012931"],["Suyo","012932"],["Tagudin","012933"],["Vigan (Capital) City","012934"]],"Iloilo":[["Ajuy","063001"],["Alimodian","063002"],["Anilao","063003"],["Badiangan","063004"],["Balasan","063005"],["Banate","063006"],["Barotac Nuevo","063007"],["Barotac Viejo","063008"],["Batad","063009"],["Bingawan","063010"],["Cabatuan","063012"],["Calinog","063013"],["Carles","063014"],["Concepcion","063015"],["Dingle","063016"],["Dueñas","063017"],["Dumangas","063018"],["Estancia","063019"],["Guimbal","063020"],["Igbaras","063021"],["Iloilo City (Capital)","063022"],["Janiuay","063023"],["Lambunao","063025"],["Leganes","063026"],["Lemery","063027"],["Leon","063028"],["Maasin","063029"],["Miagao","063030"],["Mina","063031"],["New Lucena","063032"],["Oton","063034"],["Passi City","063035"],["Pavia","063036"],["Pototan","063037"],["San Dionisio","063038"],["San Enrique","063039"],["San Joaquin","063040"],["San Miguel","063041"],["San Rafael","063042"],["Santa Barbara","063043"],["Sara","063044"],["Tigbauan","063045"],["Tubungan","063046"],["Zarraga","063047"]],"Isabela":[["Alicia","023101"],["Angadanan","023102"],["Aurora","023103"],["Benito Soliven","023104"],["Burgos","023105"],["Cabagan","023106"],["Cabatuan","023107"],["Cauayan City","023108"],["Cordon","023109"],["Delfin Albano (Magsaysay)","023118"],["Dinapigue","023110"],["Divilacan","023111"],["Echague","023112"],["Gamu","023113"],["Ilagan City (Capital)","023114"],["Jones","023115"],["Luna","023116"],["Maconacon","023117"],["Mallig","023119"],["Naguilian","023120"],["Palanan","023121"],["Quezon","023122"],["Quirino","023123"],["Ramon","023124"],["Reina Mercedes","023125"],["Roxas","023126"],["San Agustin","023127"],["San Guillermo","023128"],["San Isidro","023129"],["San Manuel","023130"],["San Mariano","023131"],["San Mateo","023132"],["San Pablo","023133"],["Santa Maria","023134"],["Santiago City","023135"],["Santo Tomas","023136"],["Tumauini","023137"]],"Kalinga":[["Balbalan","143201"],["Lubuagan","143206"],["Pasil","143208"],["Pinukpuk","143209"],["Rizal (Liwan)","143211"],["Tabuk (Capital) City","143213"],["Tanudan","143214"],["Tinglayan","143215"]],"La Union":[["Agoo","013301"],["Aringay","013302"],["Bacnotan","013303"],["Bagulin","013304"],["Balaoan","013305"],["Bangar","013306"],["Bauang","013307"],["Burgos","013308"],["Caba","013309"],["Luna","013310"],["Naguilian","013311"],["Pugo","013312"],["Rosario","013313"],["San Fernando (Capital) City","013314"],["San Gabriel","013315"],["San Juan","013316"],["Santo Tomas","013317"],["Santol","013318"],["Sudipen","013319"],["Tubao","013320"]],"Laguna":[["Alaminos","043401"],["Bay","043402"],["Biñan City","043403"],["Cabuyao City","043404"],["Calamba City","043405"],["Calauan","043406"],["Cavinti","043407"],["Famy","043408"],["Kalayaan","043409"],["Liliw","043410"],["Los Baños","043411"],["Luisiana","043412"],["Lumban","043413"],["Mabitac","043414"],["Magdalena","043415"],["Majayjay","043416"],["Nagcarlan","043417"],["Paete","043418"],["Pagsanjan","043419"],["Pakil","043420"],["Pangil","043421"],["Pila","043422"],["Rizal","043423"],["San Pablo City","043424"],["San Pedro City","043425"],["Santa Cruz (Capital)","043426"],["Santa Maria","043427"],["Santa Rosa City","043428"],["Siniloan","043429"],["Victoria","043430"]],"Lanao del Norte":[["Bacolod","103501"],["Baloi","103502"],["Baroy","103503"],["Iligan City","103504"],["Kapatagan","103505"],["Kauswagan","103507"],["Kolambugan","103508"],["Lala","103509"],["Linamon","103510"],["Magsaysay","103511"],["Maigo","103512"],["Matungao","103513"],["Munai","103514"],["Nunungan","103515"],["Pantao Ragat","103516"],["Pantar","103523"],["Poona Piagapo","103517"],["Salvador","103518"],["Sapad","103519"],["Sultan Naga Dimaporo (Karomatan)","103506"],["Tagoloan","103520"],["Tangcal","103521"],["Tubod (Capital)","103522"]],"Lanao del Sur":[["Bacolod-Kalawi (Bacolod Grande)","153601"],["Balabagan","153602"],["Balindong (Watu)","153603"],["Bayang","153604"],["Binidayan","153605"],["Buadiposo-Buntong","153633"],["Bubong","153606"],["Bumbaran","153637"],["Butig","153607"],["Calanogas","153632"],["Ditsaan-Ramain","153624"],["Ganassi","153609"],["Kapai","153610"],["Kapatagan","153639"],["Lumba-Bayabao (Maguing)","153611"],["Lumbaca-Unayan","153641"],["Lumbatan","153612"],["Lumbayanague","153636"],["Madalum","153613"],["Madamba","153614"],["Maguing","153634"],["Malabang","153615"],["Marantao","153616"],["Marawi City (Capital)","153617"],["Marogong","153631"],["Masiu","153618"],["Mulondo","153619"],["Pagayawan (Tatarikan)","153620"],["Piagapo","153621"],["Picong (Sultan Gumander)","153635"],["Poona Bayabao (Gata)","153622"],["Pualas","153623"],["Saguiaran","153625"],["Sultan Dumalondong","153640"],["Tagoloan II","153638"],["Tamparan","153626"],["Taraka","153627"],["Tubaran","153628"],["Tugaya","153629"],["Wao","153630"]],"Leyte":[["Abuyog","083701"],["Alangalang","083702"],["Albuera","083703"],["Babatngon","083705"],["Barugo","083706"],["Bato","083707"],["Baybay City","083708"],["Burauen","083710"],["Calubian","083713"],["Capoocan","083714"],["Carigara","083715"],["Dagami","083717"],["Dulag","083718"],["Hilongos","083719"],["Hindang","083720"],["Inopacan","083721"],["Isabel","083722"],["Jaro","083723"],["Javier (Bugho)","083724"],["Julita","083725"],["Kananga","083726"],["La Paz","083728"],["Leyte","083729"],["Macarthur","083730"],["Mahaplag","083731"],["Matag-Ob","083733"],["Matalom","083734"],["Mayorga","083735"],["Merida","083736"],["Ormoc City","083738"],["Palo","083739"],["Palompon","083740"],["Pastrana","083741"],["San Isidro","083742"],["San Miguel","083743"],["Santa Fe","083744"],["Tabango","083745"],["Tabontabon","083746"],["Tacloban City (Capital)","083747"],["Tanauan","083748"],["Tolosa","083749"],["Tunga","083750"],["Villaba","083751"]],"Maguindanao":[["Ampatuan","153801"],["Barira","153818"],["Buldon","153802"],["Buluan","153803"],["Datu Abdullah Sangki","153828"],["Datu Anggal Midtimbang","153831"],["Datu Blah T. Sinsuat","153830"],["Datu Hoffer Ampatuan","153835"],["Datu Odin Sinsuat (Dinaig)","153807"],["Datu Paglas","153805"],["Datu Piang","153806"],["Datu Salibo","153836"],["Datu Saudi-Ampatuan","153826"],["Datu Unsay","153827"],["Gen. S. K. Pendatun","153819"],["Guindulungan","153825"],["Kabuntalan (Tumbao)","153814"],["Mamasapano","153820"],["Mangudadatu","153832"],["Matanog","153809"],["Northern Kabuntalan","153834"],["Pagagawan","153822"],["Pagalungan","153810"],["Paglat","153823"],["Pandag","153833"],["Parang","153811"],["Rajah Buayan","153829"],["Shariff Aguak (Maganoy) (Capital)","153808"],["Shariff Saydona Mustapha","153837"],["South Upi","153817"],["Sultan Kudarat (Nuling)","153812"],["Sultan Mastura","153824"],["Sultan Sa Barongis (Lambayong)","153813"],["Talayan","153816"],["Talitay","153821"],["Upi","153815"]],"Marinduque":[["Boac (Capital)","174001"],["Buenavista","174002"],["Gasan","174003"],["Mogpog","174004"],["Santa Cruz","174005"],["Torrijos","174006"]],"Masbate":[["Aroroy","054101"],["Baleno","054102"],["Balud","054103"],["Batuan","054104"],["Cataingan","054105"],["Cawayan","054106"],["Claveria","054107"],["Dimasalang","054108"],["Esperanza","054109"],["Mandaon","054110"],["Masbate (Capital) City","054111"],["Milagros","054112"],["Mobo","054113"],["Monreal","054114"],["Palanas","054115"],["Pio V. Corpuz (Limbuhan)","054116"],["Placer","054117"],["San Fernando","054118"],["San Jacinto","054119"],["San Pascual","054120"],["Uson","054121"]],"Metro Manila":[["Caloocan City","137501"],["Las Piñas City","137601"],["Makati City","137602"],["Malabon City","137502"],["Mandaluyong City","137401"],["Manila City","MNL000"],["Marikina City","137402"],["Muntinlupa City","137603"],["Navotas City","137503"],["Parañaque City","137604"],["Pasay City","137605"],["Pasig City","137403"],["Pateros","137606"],["Quezon City","137404"],["San Juan City","137405"],["Taguig City","137607"],["Valenzuela City","137504"]],"Misamis Occidental":[["Aloran","104201"],["Baliangao","104202"],["Bonifacio","104203"],["Calamba","104204"],["Clarin","104205"],["Concepcion","104206"],["Don Victoriano Chiongbian  (Don Mariano Marcos)","104217"],["Jimenez","104207"],["Lopez Jaena","104208"],["Oroquieta City (Capital)","104209"],["Ozamis City","104210"],["Panaon","104211"],["Plaridel","104212"],["Sapang Dalaga","104213"],["Sinacaban","104214"],["Tangub City","104215"],["Tudela","104216"]],"Misamis Oriental":[["Alubijid","104301"],["Balingasag","104302"],["Balingoan","104303"],["Binuangan","104304"],["Cagayan de Oro City (Capital)","104305"],["Claveria","104306"],["El Salvador City","104307"],["Gingoog City","104308"],["Gitagum","104309"],["Initao","104310"],["Jasaan","104311"],["Kinoguitan","104312"],["Lagonglong","104313"],["Laguindingan","104314"],["Libertad","104315"],["Lugait","104316"],["Magsaysay (Linugos)","104317"],["Manticao","104318"],["Medina","104319"],["Naawan","104320"],["Opol","104321"],["Salay","104322"],["Sugbongcogon","104323"],["Tagoloan","104324"],["Talisayan","104325"],["Villanueva","104326"]],"Mountain Province":[["Barlig","144401"],["Bauko","144402"],["Besao","144403"],["Bontoc (Capital)","144404"],["Natonin","144405"],["Paracelis","144406"],["Sabangan","144407"],["Sadanga","144408"],["Sagada","144409"],["Tadian","144410"]],"Negros Occidental":[["Bacolod City (Capital)","064501"],["Bago City","064502"],["Binalbagan","064503"],["Cadiz City","064504"],["Calatrava","064505"],["Candoni","064506"],["Cauayan","064507"],["Enrique B. Magalona (Saravia)","064508"],["Escalante City","064509"],["Himamaylan City","064510"],["Hinigaran","064511"],["Hinoba-An (Asia)","064512"],["Ilog","064513"],["Isabela","064514"],["Kabankalan City","064515"],["La Carlota City","064516"],["La Castellana","064517"],["Manapla","064518"],["Moises Padilla (Magallon)","064519"],["Murcia","064520"],["Pontevedra","064521"],["Pulupandan","064522"],["Sagay City","064523"],["Salvador Benedicto","064532"],["San Carlos City","064524"],["San Enrique","064525"],["Silay City","064526"],["Sipalay City","064527"],["Talisay City","064528"],["Toboso","064529"],["Valladolid","064530"],["Victorias City","064531"]],"Negros Oriental":[["Amlan (Ayuquitan)","074601"],["Ayungon","074602"],["Bacong","074603"],["Bais City","074604"],["Basay","074605"],["Bayawan (Tulong) City","074606"],["Bindoy (Payabon)","074607"],["Canlaon City","074608"],["Dauin","074609"],["Dumaguete City (Capital)","074610"],["Guihulngan City","074611"],["Jimalalud","074612"],["La Libertad","074613"],["Mabinay","074614"],["Manjuyod","074615"],["Pamplona","074616"],["San Jose","074617"],["Santa Catalina","074618"],["Siaton","074619"],["Sibulan","074620"],["Tanjay City","074621"],["Tayasan","074622"],["Valencia (Luzurriaga)","074623"],["Vallehermoso","074624"],["Zamboanguita","074625"]],"Northern Samar":[["Allen","084801"],["Biri","084802"],["Bobon","084803"],["Capul","084804"],["Catarman (Capital)","084805"],["Catubig","084806"],["Gamay","084807"],["Laoang","084808"],["Lapinig","084809"],["Las Navas","084810"],["Lavezares","084811"],["Lope de Vega","084824"],["Mapanas","084812"],["Mondragon","084813"],["Palapag","084814"],["Pambujan","084815"],["Rosario","084816"],["San Antonio","084817"],["San Isidro","084818"],["San Jose","084819"],["San Roque","084820"],["San Vicente","084821"],["Silvino Lobos","084822"],["Victoria","084823"]],"Nueva Ecija":[["Aliaga","034901"],["Bongabon","034902"],["Cabanatuan City","034903"],["Cabiao","034904"],["Carranglan","034905"],["Cuyapo","034906"],["Gabaldon (Bitulok & Sabani)","034907"],["Gapan City","034908"],["General Mamerto Natividad","034909"],["General Tinio (Papaya)","034910"],["Guimba","034911"],["Jaen","034912"],["Laur","034913"],["Licab","034914"],["Llanera","034915"],["Lupao","034916"],["Nampicuan","034918"],["Palayan City (Capital)","034919"],["Pantabangan","034920"],["Peñaranda","034921"],["Quezon","034922"],["Rizal","034923"],["San Antonio","034924"],["San Isidro","034925"],["San Jose City","034926"],["San Leonardo","034927"],["Santa Rosa","034928"],["Santo Domingo","034929"],["Science City of Muñoz","034917"],["Talavera","034930"],["Talugtug","034931"],["Zaragoza","034932"]],"Nueva Vizcaya":[["Alfonso Castaneda","025015"],["Ambaguio","025001"],["Aritao","025002"],["Bagabag","025003"],["Bambang","025004"],["Bayombong (Capital)","025005"],["Diadi","025006"],["Dupax del Norte","025007"],["Dupax del Sur","025008"],["Kasibu","025009"],["Kayapa","025010"],["Quezon","025011"],["Santa Fe","025012"],["Solano","025013"],["Villaverde","025014"]],"Occidental Mindoro":[["Abra de Ilog","175101"],["Calintaan","175102"],["Looc","175103"],["Lubang","175104"],["Magsaysay","175105"],["Mamburao (Capital)","175106"],["Paluan","175107"],["Rizal","175108"],["Sablayan","175109"],["San Jose","175110"],["Santa Cruz","175111"]],"Oriental Mindoro":[["Baco","175201"],["Bansud","175202"],["Bongabong","175203"],["Bulalacao (San Pedro)","175204"],["Calapan (Capital) City","175205"],["Gloria","175206"],["Mansalay","175207"],["Naujan","175208"],["Pinamalayan","175209"],["Pola","175210"],["Puerto Galera","175211"],["Roxas","175212"],["San Teodoro","175213"],["Socorro","175214"],["Victoria","175215"]],"Palawan":[["Aborlan","175301"],["Agutaya","175302"],["Araceli","175303"],["Balabac","175304"],["Bataraza","175305"],["Brooke'S Point","175306"],["Busuanga","175307"],["Cagayancillo","175308"],["Coron","175309"],["Culion","175322"],["Cuyo","175310"],["Dumaran","175311"],["El Nido (Bacuit)","175312"],["Kalayaan","175321"],["Linapacan","175313"],["Magsaysay","175314"],["Narra","175315"],["Puerto Princesa City (Capital)","175316"],["Quezon","175317"],["Rizal (Marcos)","175323"],["Roxas","175318"],["San Vicente","175319"],["Sofronio Española","175324"],["Taytay","175320"]],"Pampanga":[["Angeles City","035401"],["Apalit","035402"],["Arayat","035403"],["Bacolor","035404"],["Candaba","035405"],["Floridablanca","035406"],["Guagua","035407"],["Lubao","035408"],["Mabalacat City","035409"],["Macabebe","035410"],["Magalang","035411"],["Masantol","035412"],["Mexico","035413"],["Minalin","035414"],["Porac","035415"],["San Fernando (Capital) City","035416"],["San Luis","035417"],["San Simon","035418"],["Santa Ana","035419"],["Santa Rita","035420"],["Santo Tomas","035421"],["Sasmuan (Sexmoan)","035422"]],"Pangasinan":[["Agno","015501"],["Aguilar","015502"],["Alaminos City","015503"],["Alcala","015504"],["Anda","015505"],["Asingan","015506"],["Balungao","015507"],["Bani","015508"],["Basista","015509"],["Bautista","015510"],["Bayambang","015511"],["Binalonan","015512"],["Binmaley","015513"],["Bolinao","015514"],["Bugallon","015515"],["Burgos","015516"],["Calasiao","015517"],["Dagupan City","015518"],["Dasol","015519"],["Infanta","015520"],["Labrador","015521"],["Laoac","015548"],["Lingayen (Capital)","015522"],["Mabini","015523"],["Malasiqui","015524"],["Manaoag","015525"],["Mangaldan","015526"],["Mangatarem","015527"],["Mapandan","015528"],["Natividad","015529"],["Pozorrubio","015530"],["Rosales","015531"],["San Carlos City","015532"],["San Fabian","015533"],["San Jacinto","015534"],["San Manuel","015535"],["San Nicolas","015536"],["San Quintin","015537"],["Santa Barbara","015538"],["Santa Maria","015539"],["Santo Tomas","015540"],["Sison","015541"],["Sual","015542"],["Tayug","015543"],["Umingan","015544"],["Urbiztondo","015545"],["Urdaneta City","015546"],["Villasis","015547"]],"Quezon":[["Agdangan","045601"],["Alabat","045602"],["Atimonan","045603"],["Buenavista","045605"],["Burdeos","045606"],["Calauag","045607"],["Candelaria","045608"],["Catanauan","045610"],["Dolores","045615"],["General Luna","045616"],["General Nakar","045617"],["Guinayangan","045618"],["Gumaca","045619"],["Infanta","045620"],["Jomalig","045621"],["Lopez","045622"],["Lucban","045623"],["Lucena City (Capital)","045624"],["Macalelon","045625"],["Mauban","045627"],["Mulanay","045628"],["Padre Burgos","045629"],["Pagbilao","045630"],["Panukulan","045631"],["Patnanungan","045632"],["Perez","045633"],["Pitogo","045634"],["Plaridel","045635"],["Polillo","045636"],["Quezon","045637"],["Real","045638"],["Sampaloc","045639"],["San Andres","045640"],["San Antonio","045641"],["San Francisco (Aurora)","045642"],["San Narciso","045644"],["Sariaya","045645"],["Tagkawayan","045646"],["Tayabas City","045647"],["Tiaong","045648"],["Unisan","045649"]],"Quirino":[["Aglipay","025701"],["Cabarroguis (Capital)","025702"],["Diffun","025703"],["Maddela","025704"],["Nagtipunan","025706"],["Saguday","025705"]],"Rizal":[["Angono","045801"],["Antipolo City","045802"],["Baras","045803"],["Binangonan","045804"],["Cainta","045805"],["Cardona","045806"],["Jala-Jala","045807"],["Morong","045809"],["Pililla","045810"],["Rodriguez (Montalban)","045808"],["San Mateo","045811"],["Tanay","045812"],["Taytay","045813"],["Teresa","045814"]],"Romblon":[["Alcantara","175901"],["Banton","175902"],["Cajidiocan","175903"],["Calatrava","175904"],["Concepcion","175905"],["Corcuera","175906"],["Ferrol","175916"],["Looc","175907"],["Magdiwang","175908"],["Odiongan","175909"],["Romblon (Capital)","175910"],["San Agustin","175911"],["San Andres","175912"],["San Fernando","175913"],["San Jose","175914"],["Santa Fe","175915"],["Santa Maria (Imelda)","175917"]],"Samar (Western Samar)":[["Almagro","086001"],["Basey","086002"],["Calbayog City","086003"],["Calbiga","086004"],["Catbalogan (Capital) City","086005"],["Daram","086006"],["Gandara","086007"],["Hinabangan","086008"],["Jiabong","086009"],["Marabut","086010"],["Matuguinao","086011"],["Motiong","086012"],["Pagsanghan","086026"],["Paranas (Wright)","086022"],["Pinabacdao","086013"],["San Jorge","086025"],["San Jose de Buan","086014"],["San Sebastian","086015"],["Santa Margarita","086016"],["Santa Rita","086017"],["Santo Niño","086018"],["Tagapul-An","086024"],["Talalora","086019"],["Tarangnan","086020"],["Villareal","086021"],["Zumarraga","086023"]],"Sarangani":[["Alabel (Capital)","128001"],["Glan","128002"],["Kiamba","128003"],["Maasim","128004"],["Maitum","128005"],["Malapatan","128006"],["Malungon","128007"]],"Siquijor":[["Enrique Villanueva","076101"],["Larena","076102"],["Lazi","076103"],["Maria","076104"],["San Juan","076105"],["Siquijor (Capital)","076106"]],"Sorsogon":[["Barcelona","056202"],["Bulan","056203"],["Bulusan","056204"],["Casiguran","056205"],["Castilla","056206"],["Donsol","056207"],["Gubat","056208"],["Irosin","056209"],["Juban","056210"],["Magallanes","056211"],["Matnog","056212"],["Pilar","056213"],["Prieto Diaz","056214"],["Santa Magdalena","056215"],["Sorsogon (Capital) City","056216"]],"South Cotabato":[["Banga","126302"],["General Santos City (Dadiangas)","126303"],["Koronadal (Capital) City","126306"],["Lake Sebu","126319"],["Norala","126311"],["Polomolok","126312"],["Santo Niño","126318"],["Surallah","126313"],["T'Boli","126316"],["Tampakan","126314"],["Tantangan","126315"],["Tupi","126317"]],"Southern Leyte":[["Anahawan","086401"],["Bontoc","086402"],["Hinunangan","086403"],["Hinundayan","086404"],["Libagon","086405"],["Liloan","086406"],["Limasawa","086419"],["Maasin (Capital) City","086407"],["Macrohon","086408"],["Malitbog","086409"],["Padre Burgos","086410"],["Pintuyan","086411"],["Saint Bernard","086412"],["San Francisco","086413"],["San Juan (Cabalian)","086414"],["San Ricardo","086415"],["Silago","086416"],["Sogod","086417"],["Tomas Oppus","086418"]],"Sultan Kudarat":[["Bagumbayan","126501"],["Columbio","126502"],["Esperanza","126503"],["Isulan (Capital)","126504"],["Kalamansig","126505"],["Lambayong (Mariano Marcos)","126508"],["Lebak","126506"],["Lutayan","126507"],["Palimbang","126509"],["President Quirino","126510"],["Sen. Ninoy Aquino","126512"],["Tacurong City","126511"]],"Sulu":[["Hadji Panglima Tahil (Marunggas)","156606"],["Indanan","156601"],["Jolo (Capital)","156602"],["Kalingalan Caluang","156603"],["Lugus","156617"],["Luuk","156604"],["Maimbung","156605"],["Old Panamao","156607"],["Omar","156619"],["Pandami","156618"],["Panglima Estino (New Panamao)","156616"],["Pangutaran","156608"],["Parang","156609"],["Pata","156610"],["Patikul","156611"],["Siasi","156612"],["Talipao","156613"],["Tapul","156614"],["Tongkil","156615"]],"Surigao del Norte":[["Alegria","166701"],["Bacuag","166702"],["Burgos","166704"],["Claver","166706"],["Dapa","166707"],["General Luna","166710"],["Gigaquit","166711"],["Mainit","166714"],["Malimono","166715"],["Pilar","166716"],["Placer","166717"],["San Benito","166718"],["San Francisco (Anao-Aon)","166719"],["San Isidro","166720"],["Santa Monica (Sapao)","166721"],["Sison","166722"],["Socorro","166723"],["Surigao City (Capital)","166724"],["Tagana-An","166725"],["Tubod","166727"],["del Carmen","166708"]],"Surigao del Sur":[["Barobo","166801"],["Bayabas","166802"],["Bislig City","166803"],["Cagwait","166804"],["Cantilan","166805"],["Carmen","166806"],["Carrascal","166807"],["Cortes","166808"],["Hinatuan","166809"],["Lanuza","166810"],["Lianga","166811"],["Lingig","166812"],["Madrid","166813"],["Marihatag","166814"],["San Agustin","166815"],["San Miguel","166816"],["Tagbina","166817"],["Tago","166818"],["Tandag (Capital) City","166819"]],"Tarlac":[["Anao","036901"],["Bamban","036902"],["Camiling","036903"],["Capas","036904"],["Concepcion","036905"],["Gerona","036906"],["La Paz","036907"],["Mayantoc","036908"],["Moncada","036909"],["Paniqui","036910"],["Pura","036911"],["Ramos","036912"],["San Clemente","036913"],["San Jose","036918"],["San Manuel","036914"],["Santa Ignacia","036915"],["Tarlac (Capital) City","036916"],["Victoria","036917"]],"Tawi-Tawi":[["Bongao (Capital)","157002"],["Languyan","157009"],["Mapun (Cagayan de Tawi-Tawi)","157003"],["Panglima Sugala (Balimbing)","157001"],["Sapa-Sapa","157010"],["Sibutu","157011"],["Simunul","157004"],["Sitangkai","157005"],["South Ubian","157006"],["Tandubas","157007"],["Turtle Islands","157008"]],"Zambales":[["Botolan","037101"],["Cabangan","037102"],["Candelaria","037103"],["Castillejos","037104"],["Iba (Capital)","037105"],["Masinloc","037106"],["Olongapo City","037107"],["Palauig","037108"],["San Antonio","037109"],["San Felipe","037110"],["San Marcelino","037111"],["San Narciso","037112"],["Santa Cruz","037113"],["Subic","037114"]],"Zamboanga Sibugay":[["Alicia","098301"],["Buug","098302"],["Diplahan","098303"],["Imelda","098304"],["Ipil (Capital)","098305"],["Kabasalan","098306"],["Mabuhay","098307"],["Malangas","098308"],["Naga","098309"],["Olutanga","098310"],["Payao","098311"],["Roseller Lim","098312"],["Siay","098313"],["Talusan","098314"],["Titay","098315"],["Tungawan","098316"]],"Zamboanga del Norte":[["Bacungan (Leon T. Postigo)","097226"],["Baliguian","097224"],["Dapitan City","097201"],["Dipolog City (Capital)","097202"],["Godod","097225"],["Gutalac","097223"],["Jose Dalman (Ponot)","097222"],["Kalawit","097227"],["Katipunan","097203"],["La Libertad","097204"],["Labason","097205"],["Liloy","097206"],["Manukan","097207"],["Mutia","097208"],["Piñan (New Piñan)","097209"],["Polanco","097210"],["Pres. Manuel A. Roxas","097211"],["Rizal","097212"],["Salug","097213"],["Sergio Osmeña Sr.","097214"],["Siayan","097215"],["Sibuco","097216"],["Sibutad","097217"],["Sindangan","097218"],["Siocon","097219"],["Sirawai","097220"],["Tampilisan","097221"]],"Zamboanga del Sur":[["Aurora","097302"],["Bayog","097303"],["Dimataling","097305"],["Dinas","097306"],["Dumalinao","097307"],["Dumingag","097308"],["Guipos","097343"],["Josefina","097337"],["Kumalarang","097311"],["Labangan","097312"],["Lakewood","097333"],["Lapuyan","097313"],["Mahayag","097315"],["Margosatubig","097317"],["Midsalip","097318"],["Molave","097319"],["Pagadian City (Capital)","097322"],["Pitogo","097338"],["Ramon Magsaysay (Liargo)","097323"],["San Miguel","097324"],["San Pablo","097325"],["Sominot (Don Mariano Marcos)","097340"],["Tabina","097327"],["Tambulig","097328"],["Tigbao","097344"],["Tukuran","097330"],["Vincenzo A. Sagun","097341"],["Zamboanga City","097332"]]};
+const BRGY_URL = 'ph-barangays.json';
+let BRGY_DATA = null, brgyLoading = null;
+
+const provSel = document.getElementById('prov');
+const citySel = document.getElementById('city');
+const brgySel2 = document.getElementById('brgy');
+const brgyText = document.getElementById('brgyText');
+
+Object.keys(PH_LOC).forEach(p=>{
+  const o = document.createElement('option'); o.value = o.textContent = p; provSel.appendChild(o);
+});
+
+function onProv(){
+  citySel.innerHTML = '<option value="">Piliin ang city / municipality</option>';
+  brgySel2.innerHTML = '<option value="">Piliin muna ang city</option>';
+  brgySel2.disabled = true;
+  const p = provSel.value;
+  if(!p){ citySel.disabled = true; return; }
+  PH_LOC[p].forEach(([n,code])=>{
+    const o = document.createElement('option'); o.value = code; o.textContent = n; citySel.appendChild(o);
+  });
+  citySel.disabled = false;
+  if(!BRGY_DATA && !brgyLoading) loadBrgys(); // prefetch once user engages
+}
+
+function loadBrgys(){
+  brgyLoading = fetch(BRGY_URL).then(r=>{ if(!r.ok) throw 0; return r.json(); })
+    .then(d=>{ BRGY_DATA = d; })
+    .catch(()=>{ // fallback: free-text barangay
+      brgySel2.style.display = 'none';
+      brgyText.style.display = 'block';
+    });
+}
+
+async function onCity(){
+  brgySel2.innerHTML = '<option value="">Loading barangays...</option>';
+  brgySel2.disabled = true;
+  const code = citySel.value;
+  if(!code) return;
+  if(!BRGY_DATA){ if(!brgyLoading) loadBrgys(); await brgyLoading; }
+  if(!BRGY_DATA) return; // fallback text field already shown
+  const list = BRGY_DATA[code] || [];
+  brgySel2.innerHTML = '<option value="">Piliin ang barangay</option>';
+  list.forEach(b=>{
+    const o = document.createElement('option'); o.value = o.textContent = b; brgySel2.appendChild(o);
+  });
+  brgySel2.disabled = false;
+}
+
+/* ---------- Hero video autoplay fallback ---------- */
+const hv = document.getElementById('heroVid');
+function heroPlay(){ hv.muted = true; hv.play(); document.getElementById('heroPlayBtn').style.display='none'; }
+if(hv){
+  const tryPlay = hv.play();
+  if(tryPlay !== undefined){
+    tryPlay.catch(()=>{ document.getElementById('heroPlayBtn').style.display='flex'; });
+  }
+  hv.addEventListener('error', ()=>{ document.getElementById('heroPlayBtn').style.display='none'; });
+}
+
+/* ---------- Purchase popup rotation ---------- */
+const buyers = [
+  {n:'Maria S.', c:'Cebu City', a:'👩'},
+  {n:'Jenny R.', c:'Batangas', a:'👩‍🦱'},
+  {n:'Rowena T.', c:'Quezon City', a:'👱‍♀️'},
+  {n:'Mark D.', c:'Davao City', a:'👨'},
+  {n:'Ana L.', c:'Calamba, Laguna', a:'👩‍🦰'},
+  {n:'Grace P.', c:'Iloilo City', a:'👩'},
+  {n:'Kristine B.', c:'Bacolod', a:'👩‍🦱'},
+  {n:'Joan M.', c:'Cagayan de Oro', a:'👱‍♀️'},
+  {n:'Liza V.', c:'Pampanga', a:'👩'},
+  {n:'Cherry A.', c:'Tarlac', a:'👩‍🦰'}
+];
+const bundles = ['bumili ng 1x KwentoKids USB','bumili ng 2x KwentoKids Bundle 🎁','bumili ng 3x Pang-Regalo Bundle 🎀','bumili ng 2x KwentoKids Bundle 🎁'];
+const pop = document.getElementById('buypop');
+function showPop(){
+  const b = buyers[Math.floor(Math.random()*buyers.length)];
+  document.getElementById('bpAvatar').textContent = b.a;
+  document.getElementById('bpName').textContent = b.n + ' — ' + b.c;
+  document.getElementById('bpItem').textContent = bundles[Math.floor(Math.random()*bundles.length)];
+  document.getElementById('bpTime').textContent = (1 + Math.floor(Math.random()*9)) + ' minutes ago ✔';
+  pop.classList.add('show');
+  setTimeout(()=>pop.classList.remove('show'), 5000);
+}
+setTimeout(showPop, 6000);
+setInterval(showPop, 14000 + Math.random()*8000);
+
+/* ---------- Inline form errors ---------- */
+function mark(fieldId, errId){
+  const f = document.getElementById(fieldId);
+  f.classList.add('invalid');
+  document.getElementById(errId).classList.add('show');
+  return f;
+}
+function clearErrors(){
+  document.querySelectorAll('.form .invalid').forEach(el=>el.classList.remove('invalid'));
+  document.querySelectorAll('.err-msg.show').forEach(el=>el.classList.remove('show'));
+  document.getElementById('errBanner').classList.remove('show');
+}
+['name','phone','prov','city','brgy','brgyText','street'].forEach(id=>{
+  const el = document.getElementById(id);
+  el.addEventListener('input', ()=>{ el.classList.remove('invalid');
+    const em = document.getElementById('err-'+(id==='brgyText'?'brgy':id)); if(em) em.classList.remove('show'); });
+  el.addEventListener('change', ()=>{ el.classList.remove('invalid');
+    const em = document.getElementById('err-'+(id==='brgyText'?'brgy':id)); if(em) em.classList.remove('show'); });
+});
+/* Phone: digits only while typing */
+document.getElementById('phone').addEventListener('input', e=>{
+  e.target.value = e.target.value.replace(/[^\d]/g,'').slice(0,11);
+});
+
+/* ---------- Confetti ---------- */
+function confetti(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const c = document.getElementById('confetti'), x = c.getContext('2d');
+  c.width = innerWidth; c.height = innerHeight;
+  const colors = ['#FFD34D','#FF5A4E','#3EC9A7','#1E2A4A','#FF8A50'];
+  const parts = Array.from({length:140},()=>({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,s:6+Math.random()*8,vy:2+Math.random()*4,vx:-2+Math.random()*4,rot:Math.random()*360,col:colors[Math.floor(Math.random()*colors.length)]}));
+  let t = 0;
+  (function draw(){
+    x.clearRect(0,0,c.width,c.height);
+    parts.forEach(p=>{ p.y+=p.vy; p.x+=p.vx; p.rot+=5;
+      x.save(); x.translate(p.x,p.y); x.rotate(p.rot*Math.PI/180); x.fillStyle=p.col; x.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6); x.restore(); });
+    if(t++ < 220) requestAnimationFrame(draw); else x.clearRect(0,0,c.width,c.height);
+  })();
+}
+</script>
+</body>
+</html>
