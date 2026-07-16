@@ -436,7 +436,7 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
 /* ============================================================
    CONFIG — replace before launch
 ============================================================ */
-const WEBHOOK_URL = 'YOUR_WEBHOOK_URL';   // e.g. Google Sheets / Make.com / n8n endpoint
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxYQhVs3yEr-WXvwBSi63A4xJWeUS2_2DZzMBZcfTnVxPq9vsOkn6h3vdArMXh6-hpf/exec';
 const PIXEL_READY = typeof fbq === 'function';
 
 /* ---------- Countdown (resets daily) ---------- */
@@ -534,7 +534,7 @@ async function submitOrder(e){
 
   // 2) Webhook → your backend forwards to Meta CAPI with the SAME event_id for dedup
   try{
-    await fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},
+    await fetch(WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},
       body: JSON.stringify({event_id:eventId,name,phone,province:prov,city,barangay:brgy,street,bundle:sel.tier+'x',amount:total,currency:'PHP',source:'kwentokids-funnel',ts:new Date().toISOString()})});
   }catch(err){ console.warn('Webhook failed — order data:',err); }
 
