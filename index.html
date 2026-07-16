@@ -504,7 +504,8 @@ async function submitOrder(e){
   const phoneRaw = document.getElementById('phone').value;
   const phone = phoneRaw.replace(/[\s-]/g,'');
   const prov = document.getElementById('prov').value;
-  const city = document.getElementById('city').value;
+  const citySelEl = document.getElementById('city');
+  const city = citySelEl.value ? citySelEl.options[citySelEl.selectedIndex].text : '';
   const brgySel = document.getElementById('brgy');
   const usingText = brgySel.style.display==='none';
   const brgy = usingText ? document.getElementById('brgyText').value.trim() : brgySel.value;
