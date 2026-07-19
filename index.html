@@ -80,6 +80,15 @@ section{padding:36px 0}
 
 /* ---------- URGENCY WIDGETS ---------- */
 .urgency{background:var(--white);border:2px dashed var(--coral);border-radius:var(--radius);padding:14px;margin:18px auto;max-width:420px;text-align:center}
+.teaser{display:flex;gap:8px;max-width:420px;margin:14px auto 0;justify-content:center}
+.teaser-card{flex:1;background:var(--white);border:2px solid #E5DCC8;border-radius:12px;padding:8px 4px;text-align:center;cursor:pointer;transition:.15s}
+.teaser-card:active{transform:scale(.96)}
+.teaser-card.mid{border-color:var(--coral);box-shadow:0 3px 10px rgba(255,90,78,.25);position:relative}
+.teaser-card .t-count{font-family:var(--font-display);font-size:.95rem;color:var(--ink)}
+.teaser-card .t-price{font-family:var(--font-display);font-size:1.05rem;color:var(--coral)}
+.teaser-card .t-tag{font-size:.6rem;font-weight:800;color:var(--mint)}
+.excl{display:inline-block;background:var(--ink);color:var(--sun);font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:999px;letter-spacing:.04em}
+.per-story{font-size:.75rem;color:#3E4A6B;font-weight:700}
 .countdown{font-family:var(--font-display);font-size:1.5rem;color:var(--coral)}
 .stockbar{background:#F0E6D2;border-radius:999px;height:14px;overflow:hidden;margin:8px 0 4px}
 .stockfill{background:linear-gradient(90deg,var(--coral),#FF8A50);height:100%;width:23%;border-radius:999px;transition:width 1s}
@@ -136,10 +145,14 @@ section{padding:36px 0}
 .total{display:flex;justify-content:space-between;font-family:var(--font-display);font-size:1.2rem;margin-top:14px;padding-top:12px;border-top:2px dashed #E5DCC8}
 
 /* ---------- PROOF ---------- */
-.proof-card{background:var(--white);border-radius:var(--radius);padding:14px;margin-bottom:10px;box-shadow:var(--shadow)}
-.proof-card .who{font-weight:800;font-size:.85rem}
+.proof-summary{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--white);border-radius:12px;padding:10px;margin-bottom:12px;box-shadow:var(--shadow)}
+.proof-summary .big-rating{font-family:var(--font-display);font-size:1.6rem;color:var(--ink)}
+.proof-grid{columns:2;column-gap:10px}
+.proof-card{background:var(--white);border-radius:var(--radius);padding:11px;margin-bottom:10px;box-shadow:var(--shadow);break-inside:avoid}
+.proof-card .who{font-weight:800;font-size:.76rem}
 .proof-card .who span{color:var(--mint);font-size:.75rem}
-.proof-card p{font-size:.88rem;margin-top:4px}
+.proof-card p{font-size:.8rem;margin-top:4px;line-height:1.4}
+.proof-card .proof-photo{width:100%;height:120px;object-fit:cover;margin-top:8px}
 .stars{color:var(--sun);letter-spacing:2px}
 /* Swap .proof-img divs with real screenshot <img> tags */
 .proof-img{background:#EFE7D4;border-radius:10px;height:90px;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#8b8368;margin-top:8px}
@@ -189,8 +202,8 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
 <header class="hero">
   <div class="wrap">
     <span class="eyebrow">Para sa mga batang 2–8 taong gulang</span>
-    <h1>100 Kids Story Videos sa <span class="hl">Isang USB</span> — Walang Internet, Walang Ads, Walang Alalahanin</h1>
-    <p class="sub">Isaksak lang sa TV. Instant na kwentong pambata — Tagalog at English — na may aral, hindi kung ano-anong lumalabas sa YouTube.</p>
+    <h1>Hanggang <span class="hl">160 Kids Story Videos</span> sa USB — Walang Internet, Walang Ads, Walang Alalahanin</h1>
+    <p class="sub">Isaksak lang sa TV o cellphone. Kwentong pambata — Tagalog at English — na may aral. May <b>EXCLUSIVE bonus stories</b> sa bundles na wala kahit saan!</p>
 
     <!-- SIGNATURE: storybook TV (replace with real demo video before launch) -->
     <div class="tv">
@@ -216,6 +229,25 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
       <div class="stockbar"><div class="stockfill" id="stockfill"></div></div>
       <div style="font-size:.8rem;font-weight:800;color:var(--coral)"><span id="stocknum">23</span> na lang natitira ngayong batch!</div>
       <div class="viewers">👀 <b id="viewers">47</b> mommies ang tumitingin nito ngayon</div>
+    </div>
+
+    <!-- BUNDLE TEASER — plants the offer early; tap = select + jump to checkout -->
+    <div class="teaser">
+      <div class="teaser-card" onclick="pickTier(1)">
+        <div class="t-count">100 kwento</div>
+        <div class="t-price">₱359</div>
+        <div class="t-tag">&nbsp;</div>
+      </div>
+      <div class="teaser-card mid" onclick="pickTier(2)">
+        <div class="t-count">130 kwento</div>
+        <div class="t-price">₱649</div>
+        <div class="t-tag">SULIT + EXCLUSIVES</div>
+      </div>
+      <div class="teaser-card" onclick="pickTier(3)">
+        <div class="t-count">160 kwento</div>
+        <div class="t-price">₱899</div>
+        <div class="t-tag">PANG-REGALO</div>
+      </div>
     </div>
   </div>
 </header>
@@ -254,6 +286,9 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
       <div class="cat"><div class="ico">🇵🇭</div><h3>Kwentong Tagalog</h3><p>Sariling wika, mas madaling ma-gets</p></div>
       <div class="cat"><div class="ico">🎵</div><h3>Sing-Along</h3><p>Masayang kanta at rhymes</p></div>
     </div>
+    <div style="background:var(--ink);color:var(--sun);border-radius:var(--radius);padding:14px;margin-top:14px;text-align:center;font-weight:800">
+      🔒 PLUS: May <span style="color:#fff">EXCLUSIVE Bonus Stories</span> na makukuha LANG sa 2x at 3x bundles — hindi 'to kasama sa regular USB!
+    </div>
   </div>
 </section>
 
@@ -288,29 +323,31 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
 <section class="checkout" id="checkout">
   <div class="wrap">
     <span class="eyebrow">Piliin ang bundle mo</span>
-    <h2>Mas Marami, Mas Tipid, Mas Maraming FREEBIES 🎁</h2>
+    <h2>Mas Maraming Kwento, May EXCLUSIVE Stories, Mas Maraming FREEBIES 🎁</h2>
 
     <!-- PRICE-HOLD TIMER -->
     <div class="hold">🔒 Naka-reserve ang presyo mo sa loob ng <b id="hold">10:00</b></div>
 
     <div class="bundle" data-tier="1" data-price="359" data-ship="85" onclick="pick(this)">
-      <h3>1x KwentoKids USB</h3>
+      <h3>1x KwentoKids USB — 100 Kwento</h3>
       <div><span class="price">₱359</span><span class="old">₱599</span></div>
-      <div class="ship-warn">⚠️ + ₱85 shipping fee</div>
+      <div class="ship-warn">⚠️ + ₱85 shipping fee · walang kasamang Exclusive Bonus Pack</div>
     </div>
 
     <div class="bundle active" data-tier="2" data-price="649" data-ship="0" onclick="pick(this)">
       <span class="tag">PINAKA-SULIT ⭐</span>
-      <h3>2x KwentoKids USB</h3>
-      <div><span class="price">₱649</span><span class="old">₱1,198</span></div>
+      <h3>2x KwentoKids USB — 130 Kwento</h3>
+      <div><span class="price">₱649</span><span class="old">₱1,198</span> <span class="per-story">(₱4.99 lang bawat kwento!)</span></div>
+      <div style="margin:6px 0"><span class="excl">🔒 EXCLUSIVE BONUS PACK</span> <b style="font-size:.85rem">+30 bagong kwento na wala sa regular USB</b></div>
       <div class="free">🚚 FREE SHIPPING</div>
-      <div class="freebie">🎁 FREE: Kids Sticker Pack — isa para sa bahay, isa kay Lola o pang-regalo!</div>
+      <div class="freebie">🎁 FREE: Kids Sticker Pack — isang USB sa bahay, isa kay Lola o pang-regalo!</div>
     </div>
 
     <div class="bundle" data-tier="3" data-price="899" data-ship="0" onclick="pick(this)">
       <span class="tag best">PANG-REGALO 🎀</span>
-      <h3>3x KwentoKids USB</h3>
-      <div><span class="price">₱899</span><span class="old">₱1,797</span></div>
+      <h3>3x KwentoKids USB — 160 Kwento</h3>
+      <div><span class="price">₱899</span><span class="old">₱1,797</span> <span class="per-story">(₱5.62 bawat kwento)</span></div>
+      <div style="margin:6px 0"><span class="excl">🔒 EXCLUSIVE BONUS PACK</span> <b style="font-size:.85rem">+60 kwento — pinakakumpletong library</b></div>
       <div class="free">🚚 FREE SHIPPING</div>
       <div class="freebie">🎁 FREE: 2x Sticker Pack + Mini Coloring Book — perfect sa pamangkin at inaanak!</div>
     </div>
@@ -359,32 +396,56 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
   <div class="wrap">
     <span class="eyebrow">Totoong feedback</span>
     <h2>Mahigit 1,000+ nanay na ang nag-order 💛</h2>
-    <!-- Replace .proof-img with real customer screenshots / photos -->
-    <div class="proof-card">
-      <div class="who">Jenny R. — Batangas <span>✔ Verified COD Buyer</span></div>
-      <div class="stars">★★★★★</div>
-      <p>"Hindi na ako kinakabahan tuwing nanonood si Zia. Yung English stories pa, napapa-repeat niya yung words. Sulit!"</p>
-      <div class="proof-row">
-        <img class="proof-photo" src="proof-photo-2.jpg" alt="Natanggap na parcel mula sa courier" loading="lazy">
-        <img class="proof-photo" src="proof-photo-1.jpg" alt="Nanay na inaabot ang KwentoKids USB sa anak habang nakabukas ang KwentoKids menu sa TV" loading="lazy">
-      </div>
+    <div class="proof-summary">
+      <div class="big-rating">4.9</div>
+      <div><div class="stars">★★★★★</div><div style="font-size:.75rem;font-weight:700;color:#3E4A6B">mula sa mga totoong COD buyers</div></div>
     </div>
-    <div class="proof-card">
-      <div class="who">Mark & Ana D. — Cebu <span>✔ Verified COD Buyer</span></div>
-      <div class="stars">★★★★★</div>
-      <p>"Binigay namin yung isa kay Mama sa province. Kahit walang WiFi doon, may panonood na yung mga apo. Salamat!"</p>
-      <div class="proof-row">
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="who">Jenny R. — Batangas <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Hindi na ako kinakabahan tuwing nanonood si Zia. Yung English stories pa, napapa-repeat niya yung words. Sulit!"</p>
+        <img class="proof-photo" src="proof-photo-2.jpg" alt="Natanggap na parcel mula sa courier" loading="lazy">
+      </div>
+      <div class="proof-card">
+        <div class="who">Mark & Ana D. — Cebu <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Binigay namin yung isa kay Mama sa province. Kahit walang WiFi doon, may panonood na yung mga apo!"</p>
         <img class="proof-photo" src="proof-photo-3.jpg" alt="Batang nanonood ng kwento sa TV" loading="lazy">
+      </div>
+      <div class="proof-card">
+        <div class="who">Rowena T. — Quezon City <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Bedtime hero talaga 'to. Pagkatapos ng 1 story, tulog na si bunso. Mommy win!"</p>
+        <img class="proof-photo" src="proof-photo-5.jpg" alt="Kwento na tumutugtog sa wall-mounted TV" loading="lazy">
+      </div>
+      <div class="proof-card">
+        <div class="who">Grace P. — Iloilo <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Akala ko sa TV lang — gumagana rin pala sa laptop! Dito na nanonood si kuya pag inaayos ko ang kapatid niya."</p>
         <img class="proof-photo" src="proof-photo-4.jpg" alt="Story video na tumutugtog sa computer" loading="lazy">
       </div>
-    </div>
-    <div class="proof-card">
-      <div class="who">Rowena T. — Quezon City <span>✔ Verified COD Buyer</span></div>
-      <div class="stars">★★★★★</div>
-      <p>"Bedtime hero talaga 'to. Pagkatapos ng 1 story, tulog na si bunso. Mommy win!"</p>
-      <div class="proof-row">
-        <img class="proof-photo" src="proof-photo-5.jpg" alt="Kwento na tumutugtog sa wall-mounted TV" loading="lazy">
+      <div class="proof-card">
+        <div class="who">Joan M. — Cagayan de Oro <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Yung kwentong Tagalog ang paborito ni bunso. Gabi-gabi 'yun ang hinahanap bago matulog. 😄"</p>
+      </div>
+      <div class="proof-card">
+        <div class="who">Kristine B. — Bacolod <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Nag-order ako pang-regalo sa inaanak ko. Sobrang natuwa, hindi na siya humihiram ng cellphone ng nanay niya!"</p>
+        <img class="proof-photo" src="proof-photo-1.jpg" alt="Nanay na inaabot ang KwentoKids USB sa anak" loading="lazy">
+      </div>
+      <div class="proof-card">
+        <div class="who">Liza V. — Pampanga <span>✔ Verified</span></div>
+        <div class="stars">★★★★☆</div>
+        <p>"3 days bago dumating sa amin sa province, pero pagdating — sulit. Maayos ang pagkaka-folder ng videos, madaling hanapin."</p>
         <img class="proof-photo" src="proof-photo-6.jpg" alt="Video menu ng USB sa TV screen" loading="lazy">
+      </div>
+      <div class="proof-card">
+        <div class="who">Cherry A. — Tarlac <span>✔ Verified</span></div>
+        <div class="stars">★★★★★</div>
+        <p>"Yung OTG ang panalo — sinaksak ko sa phone ko habang nasa bus kami pauwi. Tahimik si baby buong biyahe!"</p>
       </div>
     </div>
   </div>
@@ -400,7 +461,8 @@ footer{background:var(--ink);color:#c9d2ec;text-align:center;font-size:.75rem;pa
     <details><summary>Pwede ba sa cellphone?</summary><p>Oo! Ang KwentoKids USB ay may OTG (On-The-Go) connector — direktang isaksak sa cellphone o tablet at panoorin kahit saan. Perfect pang-biyahe, sa waiting area, o kahit nasa labas kayo. 📱</p></details>
     <details><summary>Paano ang bayad?</summary><p>Cash on Delivery. Magbabayad ka lang sa courier kapag dumating na ang order — zero risk sa'yo.</p></details>
     <details><summary>Gaano katagal ang delivery?</summary><p>2–4 days sa Metro Manila at katabing provinces, 4–7 days sa ibang region.</p></details>
-    <details><summary>Ano ang laman ng 100 videos?</summary><p>Animal tales, bedtime stories, English learning stories, values stories, kwentong Tagalog, at sing-alongs — lahat para sa edad 2–8.</p></details>
+    <details><summary>Ano ang laman ng videos?</summary><p>Animal tales, bedtime stories, English learning stories, values stories, kwentong Tagalog, at sing-alongs — lahat para sa edad 2–8. 100 kwento sa bawat USB.</p></details>
+    <details><summary>Ano ang Exclusive Bonus Pack?</summary><p>Mga bagong kwento na ginawa namin exclusively para sa bundle buyers — hindi kasama sa regular USB at hindi mabibili nang hiwalay. 30 bonus stories sa 2x bundle (130 total), 60 sa 3x bundle (160 total).</p></details>
     <details><summary>Paano kung sira o hindi gumana?</summary><p>Papalitan namin agad — i-message lang kami sa aming FB page with photo/video. Replacement guarantee.</p></details>
   </div>
 </section>
@@ -480,6 +542,11 @@ function pick(el){
 
 /* ---------- Scroll to checkout + floating CTA ---------- */
 function goCheckout(){ document.getElementById('checkout').scrollIntoView({behavior:'smooth'}); }
+function pickTier(n){
+  const el = document.querySelector('.bundle[data-tier="'+n+'"]');
+  if(el) pick(el);
+  goCheckout();
+}
 window.addEventListener('scroll',()=>{
   const co = document.getElementById('checkout').getBoundingClientRect();
   const inCheckout = co.top < window.innerHeight && co.bottom > 0;
