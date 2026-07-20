@@ -594,22 +594,27 @@ async function submitOrder(e){
     return;
   }
 
+  // Double-tap guard: one order per session
+  if(window.orderSubmitting) return;
+  window.orderSubmitting = true;
+  const submitBtn = e.currentTarget || document.querySelector('.form .cta');
+  if(submitBtn){ submitBtn.disabled = true; submitBtn.style.animation = 'none'; submitBtn.innerHTML = '✅ NATANGGAP NA ANG ORDER!'; }
+
   const total = sel.price + sel.ship;
   const eventId = (crypto.randomUUID ? crypto.randomUUID() : 'evt_' + Date.now());
 
   // 1) Browser pixel — Purchase with event_id
   if(PIXEL_READY) fbq('track','Purchase',{value:total,currency:'PHP',content_name:'KwentoKids USB '+sel.tier+'x',num_items:sel.tier},{eventID:eventId});
 
-  // 2) Webhook → your backend forwards to Meta CAPI with the SAME event_id for dedup
-  try{
-    await fetch(WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},
-      body: JSON.stringify({event_id:eventId,name,phone,province:prov,city,barangay:brgy,street,bundle:sel.tier+'x',amount:total,currency:'PHP',source:'kwentokids-funnel',ts:new Date().toISOString()})});
-  }catch(err){ console.warn('Webhook failed — order data:',err); }
-
-  // 3) Success + confetti
+  // 2) SUCCESS SHOWN INSTANTLY — no waiting for the webhook
   document.getElementById('successTotal').textContent = '₱' + total.toLocaleString();
   document.getElementById('successModal').classList.add('show');
   confetti();
+
+  // 3) Webhook fires in the BACKGROUND (Google cold-start no longer blocks the buyer)
+  fetch(WEBHOOK_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body: JSON.stringify({event_id:eventId,name,phone,province:prov,city,barangay:brgy,street,bundle:sel.tier+'x',amount:total,currency:'PHP',source:'kwentokids-funnel',ts:new Date().toISOString()})})
+    .catch(err=>console.warn('Webhook failed — order data:',err));
 }
 
 
